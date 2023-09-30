@@ -14,8 +14,18 @@
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s;
 }
 
 .search-form__input::placeholder {
   color: #C2A8DC;
+}
+
+.search-form__input:hover {
+  background: rgba(255,255,255,.25);
+}
+
+.search-form__input:focus {
+  background-color: #8551b9;
+  outline: none;
 }
