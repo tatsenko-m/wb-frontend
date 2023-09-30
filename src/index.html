@@ -8,12 +8,22 @@
   <body class="page">
     <header class="header">
       <div class="header__container">
-        <button class="header__burger-menu-btn burger-menu-btn" type="button">
+        <button class="burger-menu-btn header__burger-menu-btn" type="button">
           <span class="burger-menu-btn__line"></span>
         </button>
-        <h1 class="header__logo">Товары и точка</h1>
-        <form class="header__search-form search-form">
-          <input class="search-form__input" type="text" placeholder="Я ищу..." />
+        <a class="header__logo-link" href="/">
+          <img
+            class="header__logo"
+            src="<%=require('./images/logo-desktop.svg')%>"
+            alt="Логотип Товары и точка"
+          />
+        </a>
+        <form class="search-form header__search-form">
+          <input
+            class="search-form__input"
+            type="text"
+            placeholder="Я ищу..."
+          />
           <button class="search-form__btn" type="submit"></button>
         </form>
         <nav class="header__navbar-desktop navbar-desktop">
