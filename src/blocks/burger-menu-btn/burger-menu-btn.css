@@ -1,0 +1,15 @@
+.burger-menu-btn {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 11px 9px;
+  cursor: pointer;
+  transition: border-color 0.5s;
+}
+
+.burger-menu-btn:hover {
+  border-color: #FFF;
+}

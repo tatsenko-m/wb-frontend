@@ -1,0 +1,6 @@
+.header {
+  display: flex;
+  margin: 0 auto;
+  background-color: #6725A8;
+  box-sizing: border-box;
+}

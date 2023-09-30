@@ -1,0 +1,8 @@
+.header__container {
+  max-width: 1352px;
+  width: calc(100% - 48px);
+  display: flex;
+  margin: 0 auto;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
