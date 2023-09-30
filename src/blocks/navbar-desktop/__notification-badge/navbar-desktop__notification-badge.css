@@ -1,0 +1,19 @@
+.navbar-desktop__notification-badge {
+  min-width: 16px;
+  height: 16px;
+  background-color: #F55123;
+  border-radius: 8px;
+  position: absolute;
+  right: 4px;
+  top: -3.5px;
+  text-align: center;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0 2px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
