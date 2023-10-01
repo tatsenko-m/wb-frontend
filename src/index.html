@@ -51,5 +51,81 @@
         </nav>
       </div>
     </header>
+    <main>
+      <form class="cart-form">
+        <div class="cart-content">
+          <section class="cart-items">
+            <h2 class="cart-items__heading">Корзина</h2>
+            <div class="cart-items__accordion">
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  class="invisible-checkbox"
+                  name="checkAll"
+                  checked
+                />
+                <span class="checkbox__input"></span>Выбрать все</label
+              >
+              <button class="cart-items__accordion-btn" type="button"></button>
+            </div>
+            <ul class="cart-items__list"></ul>
+          </section>
+          <section class="delivery"></section>
+          <section class="payment"></section>
+          <section class="recipient"></section>
+          <section class="total"></section>
+        </div>
+      </form>
+    </main>
+    <template id="item-template">
+      <li class="item">
+        <div class="item__good">
+          <div class="item__good-img-block">
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                class="invisible-checkbox"
+                name="check"
+                checked
+              />
+              <span class="checkbox__input"></span>
+            </label>
+            <img class="item__image" src="/" alt="" />
+          </div>
+          <div class="item__good-info">
+            <p class="item__good-title"></p>
+            <div class="item__good-features">
+              <p class="item__good-feature" id="item-color"></p>
+              <p class="item__good-feature" id="item-size"></p>
+            </div>
+            <div class="item__vendor">
+              <p class="item__warehouse"></p>
+              <div class="item__company-info">
+                <p class="item__company-name"></p>
+                <div class="item__company-details-icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item__calc">
+          <div class="item__count">
+            <div class="counter">
+              <button class="counter_minus-btn"></button>
+              <input type="number" class="counter_input" />
+              <button class="counter_plus-btn"></button>
+            </div>
+            <p class="item__count-warning"></p>
+            <div class="item_actions">
+              <button class="item_like-btn" type="button"></button>
+              <button class="item_delete-btn" type="button"></button>
+            </div>
+          </div>
+          <div class="item_price">
+            <p class="item_price-new"></p>
+            <p class="item_price-old"></p>
+          </div>
+        </div>
+      </li>
+    </template>
   </body>
 </html>
