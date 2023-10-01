@@ -7,9 +7,23 @@
   border: 1px solid rgba(255, 255, 255, 0.45);
   padding: 11px 9px;
   cursor: pointer;
+  opacity: 1;
   transition: border-color 0.5s;
 }
 
 .burger-menu-btn:hover {
-  border-color: #FFF;
+  border-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .burger-menu-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 5px 3px;
+    transition: opacity 0.5s;
+  }
+  .burger-menu-btn:hover {
+    opacity: 0.7;
+  }
 }

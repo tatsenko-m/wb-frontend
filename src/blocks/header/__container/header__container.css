@@ -7,3 +7,10 @@
   padding: 16px 0 40px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    width: calc(100% - 26px);
+    padding: 14px 0 38px;
+  }
+}

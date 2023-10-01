@@ -3,3 +3,10 @@
   height: 56px;
   object-fit: contain;
 }
+
+@media screen and (max-width: 767px) {
+  .header__logo {
+    width: 198px;
+    height: 24px;
+  }
+}

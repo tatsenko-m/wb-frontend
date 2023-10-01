@@ -3,3 +3,9 @@
   flex-grow: 1;
   position: relative;
 }
+
+@media screen and (max-width: 767px) {
+  .search-form {
+    display: none;
+  }
+}

@@ -12,11 +12,18 @@
           <span class="burger-menu-btn__line"></span>
         </button>
         <a class="header__logo-link" href="/">
-          <img
-            class="header__logo"
-            src="<%=require('./images/logo-desktop.svg')%>"
-            alt="Логотип Товары и точка"
-          />
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="<%=require('./images/logo-mobile.svg')%>"
+            />
+            <source srcset="<%=require('./images/logo-desktop.svg')%>" />
+            <img
+              class="header__logo"
+              src="<%=require('./images/logo-desktop.svg')%>"
+              alt="Логотип Товары и точка"
+            />
+          </picture>
         </a>
         <form class="search-form header__search-form">
           <input
@@ -26,6 +33,7 @@
           />
           <button class="search-form__btn" type="submit"></button>
         </form>
+        <button class="header__search-btn" type="button"></button>
         <nav class="header__navbar-desktop navbar-desktop">
           <a class="navbar-desktop__link" href="#"
             ><span

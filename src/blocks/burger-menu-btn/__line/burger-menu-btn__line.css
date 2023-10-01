@@ -28,3 +28,20 @@
   position: absolute;
   top: -10px;
 }
+
+@media screen and (max-width: 767px) {
+  .burger-menu-btn__line {
+    width: 22px;
+    height: 2.5px;
+  }
+  .burger-menu-btn__line::before {
+    width: 16px;
+    height: 2.5px;
+    top: 8px;
+  }
+  .burger-menu-btn__line::after {
+    width: 22px;
+    height: 2.5px;
+    top: -8px;
+  }
+}
