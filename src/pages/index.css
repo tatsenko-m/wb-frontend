@@ -25,3 +25,17 @@
 @import url(../blocks/navbar-desktop/__icon/_type/navbar-desktop__icon_type_basket.css);
 @import url(../blocks/navbar-desktop/__icon/_badged/navbar-desktop__icon_badged.css);
 @import url(../blocks/navbar-desktop/__notification-badge/navbar-desktop__notification-badge.css);
+
+@import url(../blocks/main/main.css);
+
+@import url(../blocks/cart-content/cart-content.css);
+
+@import url(../blocks/cart-items/cart-items.css);
+@import url(../blocks/cart-items/__heading/cart-items__heading.css);
+@import url(../blocks/cart-items/__accordion/cart-items__accordion.css);
+@import url(../blocks/cart-items/__accordion-btn/cart-items__accordion-btn.css);
+
+@import url(../blocks/checkbox-label/checkbox-label.css);
+@import url(../blocks/checkbox-label/__invisible-item/checkbox-label__invisible-item.css);
+@import url(../blocks/checkbox-label/__pseudo-item/checkbox-label__pseudo-item.css);
+@import url(../blocks/checkbox-label/__text/checkbox-label__text.css);

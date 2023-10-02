@@ -1,0 +1,13 @@
+.cart-items__heading {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 0 27px;
+  padding: 0;
+}

@@ -1,0 +1,16 @@
+.cart-items__accordion-btn {
+  background-image: url(../../../images/accordion-icon.svg);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.cart-items__accordion-btn:hover {
+  opacity: 0.6;
+}
