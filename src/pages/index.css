@@ -34,6 +34,7 @@
 @import url(../blocks/cart-items/__heading/cart-items__heading.css);
 @import url(../blocks/cart-items/__accordion/cart-items__accordion.css);
 @import url(../blocks/cart-items/__accordion-btn/cart-items__accordion-btn.css);
+@import url(../blocks/cart-items/__list/cart-items__list.css);
 
 @import url(../blocks/checkbox-label/checkbox-label.css);
 @import url(../blocks/checkbox-label/__invisible-item/checkbox-label__invisible-item.css);
@@ -41,3 +42,9 @@
 @import url(../blocks/checkbox-label/_type/checkbox-label_type_check-all.css);
 @import url(../blocks/checkbox-label/__text/checkbox-label__text.css);
 @import url(../blocks/checkbox-label/__text/_type/checkbox-label__text_type_check-all.css);
+
+@import url(../blocks/item/item.css);
+@import url(../blocks/item/__good/item__good.css);
+@import url(../blocks/item/__good-img-block/item__good-img-block.css);
+@import url(../blocks/item/__image-link/item__image-link.css);
+@import url(../blocks/item/__image/item__image.css);

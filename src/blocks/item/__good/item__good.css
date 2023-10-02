@@ -1,0 +1,4 @@
+.item__good {
+  display: flex;
+  gap: 16px;
+}
