@@ -1,0 +1,5 @@
+.item__good-features {
+  display: flex;
+  width: max-content;
+  gap: 17px;
+}

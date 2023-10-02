@@ -1,0 +1,13 @@
+.item__vendor {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #9797AF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

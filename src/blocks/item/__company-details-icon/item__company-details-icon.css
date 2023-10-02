@@ -1,0 +1,9 @@
+.item__company-details-icon {
+  background-image: url(../../../images/company-details-icon.svg);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}

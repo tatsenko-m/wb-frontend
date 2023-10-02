@@ -48,3 +48,12 @@
 @import url(../blocks/item/__good-img-block/item__good-img-block.css);
 @import url(../blocks/item/__image-link/item__image-link.css);
 @import url(../blocks/item/__image/item__image.css);
+@import url(../blocks/item/__good-info/item__good-info.css);
+@import url(../blocks/item/__good-title/item__good-title.css);
+@import url(../blocks/item/__good-features/item__good-features.css);
+@import url(../blocks/item/__good-feature/item__good-feature.css);
+@import url(../blocks/item/__vendor/item__vendor.css);
+@import url(../blocks/item/__warehouse/item__warehouse.css);
+@import url(../blocks/item/__company-info/item__company-info.css);
+@import url(../blocks/item/__company-name/item__company-name.css);
+@import url(../blocks/item/__company-details-icon/item__company-details-icon.css);
