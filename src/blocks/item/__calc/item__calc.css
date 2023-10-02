@@ -1,0 +1,4 @@
+.item__calc {
+  display: flex;
+  justify-content: space-between;
+}
