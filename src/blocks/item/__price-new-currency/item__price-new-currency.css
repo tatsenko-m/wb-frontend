@@ -1,0 +1,13 @@
+.item__price-new-currency {
+  text-align: right;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}

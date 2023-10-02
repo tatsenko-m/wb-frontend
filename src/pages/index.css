@@ -59,6 +59,15 @@
 @import url(../blocks/item/__company-details-icon/item__company-details-icon.css);
 @import url(../blocks/item/__calc/item__calc.css);
 @import url(../blocks/item/__count/item__count.css);
+@import url(../blocks/item/__count-warning/item__count-warning.css);
+@import url(../blocks/item/__actions/item__actions.css);
+@import url(../blocks/item/__like-btn/item__like-btn.css);
+@import url(../blocks/item/__delete-btn/item__delete-btn.css);
+@import url(../blocks/item/__price/item__price.css);
+@import url(../blocks/item/__price-new/item__price-new.css);
+@import url(../blocks/item/__price-new-number/item__price-new-number.css);
+@import url(../blocks/item/__price-new-currency/item__price-new-currency.css);
+@import url(../blocks/item/__price-old/item__price-old.css);
 
 @import url(../blocks/counter/counter.css);
 @import url(../blocks/counter/__btn/counter__btn.css);

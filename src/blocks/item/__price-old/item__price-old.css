@@ -1,0 +1,25 @@
+.item__price-old {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #9797AF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-bottom: 1px dashed #C5C5C8;
+  cursor: pointer;
+}
+
+.item__price-old::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5.5px;
+  border-bottom: 1px solid #9797AF;
+}
