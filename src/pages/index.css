@@ -38,4 +38,4 @@
 @import url(../blocks/checkbox-label/checkbox-label.css);
 @import url(../blocks/checkbox-label/__invisible-item/checkbox-label__invisible-item.css);
 @import url(../blocks/checkbox-label/__pseudo-item/checkbox-label__pseudo-item.css);
-@import url(../blocks/checkbox-label/__text/checkbox-label__text.css);
+@import url(../blocks/checkbox-label/_type/checkbox-label_type_check-all.css);
