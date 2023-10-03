@@ -66,6 +66,7 @@
 @import url(../blocks/item/__price/item__price.css);
 @import url(../blocks/item/__price-new/item__price-new.css);
 @import url(../blocks/item/__price-new-number/item__price-new-number.css);
+@import url(../blocks/item/__price-new-number/_big/item__price-new-number_big.css);
 @import url(../blocks/item/__price-new-currency/item__price-new-currency.css);
 @import url(../blocks/item/__price-old/item__price-old.css);
 
