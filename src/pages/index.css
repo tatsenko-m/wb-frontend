@@ -35,6 +35,8 @@
 @import url(../blocks/cart-items/__accordion/cart-items__accordion.css);
 @import url(../blocks/cart-items/__accordion-btn/cart-items__accordion-btn.css);
 @import url(../blocks/cart-items/__list/cart-items__list.css);
+@import url(../blocks/cart-items/__list/_unavailable/cart-items__list_unavailable.css);
+@import url(../blocks/cart-items/__unavailable-heading/cart-items__unavailable-heading.css);
 
 @import url(../blocks/checkbox-label/checkbox-label.css);
 @import url(../blocks/checkbox-label/__invisible-item/checkbox-label__invisible-item.css);
@@ -48,7 +50,9 @@
 @import url(../blocks/item/__good-img-block/item__good-img-block.css);
 @import url(../blocks/item/__image-link/item__image-link.css);
 @import url(../blocks/item/__image/item__image.css);
+@import url(../blocks/item/__image/_unavailable/item__image_unavailable.css);
 @import url(../blocks/item/__good-info/item__good-info.css);
+@import url(../blocks/item/__good-info/_unavailable/item__good-info_unavailable.css);
 @import url(../blocks/item/__good-title/item__good-title.css);
 @import url(../blocks/item/__good-features/item__good-features.css);
 @import url(../blocks/item/__good-feature/item__good-feature.css);
@@ -58,6 +62,7 @@
 @import url(../blocks/item/__company-name/item__company-name.css);
 @import url(../blocks/item/__company-details-icon/item__company-details-icon.css);
 @import url(../blocks/item/__calc/item__calc.css);
+@import url(../blocks/item/__calc/_unavailable/item__calc_unavailable.css);
 @import url(../blocks/item/__count/item__count.css);
 @import url(../blocks/item/__count-warning/item__count-warning.css);
 @import url(../blocks/item/__actions/item__actions.css);

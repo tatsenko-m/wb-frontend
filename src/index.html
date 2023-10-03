@@ -275,6 +275,44 @@
                 </div>
               </li>
             </ul>
+            <div class="cart-items__accordion">
+              <p class="cart-items__unavailable-heading">Отсутствуют · 3 товара</p>
+              <button class="cart-items__accordion-btn" type="button"></button>
+            </div>
+            <ul class="cart-items__list cart-items__list_unavailable">
+              <li class="item">
+                <div class="item__good">
+                  <div class="item__good-img-block">
+                    <a class="item__image-link" href="#">
+                      <img
+                        class="item__image item__image_unavailable"
+                        src="<%=require('./images/t-shirt.png')%>"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="item__good-info item__good-info_unavailable">
+                    <p class="item__good-title">Футболка UZcotton мужская</p>
+                    <div class="item__good-features">
+                      <p class="item__good-feature" id="item-color">
+                        Цвет: белый
+                      </p>
+                      <p class="item__good-feature" id="item-size">
+                        Размер: 56
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item__calc item__calc_unavailable">
+                  <div class="item__count">
+                    <div class="item__actions">
+                      <button class="item__like-btn" type="button"></button>
+                      <button class="item__delete-btn" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </section>
           <section class="delivery"></section>
           <section class="payment"></section>
