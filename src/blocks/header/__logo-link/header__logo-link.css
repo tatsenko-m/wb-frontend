@@ -1,6 +1,7 @@
 .header__logo-link {
   display: flex;
   margin-right: 32px;
+  margin-top: 2px;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,6 +1,8 @@
 .item__price {
   display: flex;
+  min-width: 110px;
   flex-direction: column;
   align-items: flex-end;
   gap: 5px;
+  margin-top: -3px;
 }

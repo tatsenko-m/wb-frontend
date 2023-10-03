@@ -2,9 +2,8 @@
   max-width: 1352px;
   width: calc(100% - 48px);
   display: flex;
-  align-items: center;
   margin: 0 auto;
-  padding: 16px 0 40px;
+  padding: 16px 0 35.5px;
   box-sizing: border-box;
 }
 

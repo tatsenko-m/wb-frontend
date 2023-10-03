@@ -1,5 +1,5 @@
 .item__price-new {
   display: flex;
-  gap: 6px;
+  gap: 5.5px;
   align-items: baseline;
 }
