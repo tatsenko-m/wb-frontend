@@ -1,7 +1,7 @@
-.navbar-desktop__notification-badge {
+.notification-badge {
   min-width: 16px;
   height: 16px;
-  background-color: #F55123;
+  background-color: #f55123;
   border-radius: 8px;
   position: absolute;
   right: 4px;

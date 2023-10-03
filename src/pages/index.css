@@ -24,7 +24,8 @@
 @import url(../blocks/navbar-desktop/__icon/_type/navbar-desktop__icon_type_profile.css);
 @import url(../blocks/navbar-desktop/__icon/_type/navbar-desktop__icon_type_basket.css);
 @import url(../blocks/navbar-desktop/__icon/_badged/navbar-desktop__icon_badged.css);
-@import url(../blocks/navbar-desktop/__notification-badge/navbar-desktop__notification-badge.css);
+
+@import url(../blocks/notification-badge/notification-badge.css);
 
 @import url(../blocks/main/main.css);
 

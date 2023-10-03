@@ -45,7 +45,7 @@
             ><span
               class="navbar-desktop__icon navbar-desktop__icon_type_basket navbar-desktop__icon_badged"
             ></span>
-            <div class="navbar-desktop__notification-badge">3</div>
+            <div class="notification-badge">3</div>
             Корзина
           </a>
         </nav>
@@ -89,7 +89,7 @@
                       <img
                         class="item__image"
                         src="<%=require('./images/t-shirt.png')%>"
-                        alt=""
+                        alt="Футболка UZcotton мужская"
                       />
                     </a>
                   </div>
@@ -160,12 +160,15 @@
                       <img
                         class="item__image"
                         src="<%=require('./images/iphone-case.png')%>"
-                        alt=""
+                        alt="Силиконовый чехол"
                       />
                     </a>
                   </div>
                   <div class="item__good-info">
-                    <p class="item__good-title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                    <p class="item__good-title">
+                      Силиконовый чехол картхолдер (отверстия) для карт,
+                      прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                    </p>
                     <div class="item__good-features">
                       <p class="item__good-feature" id="item-color">
                         Цвет: прозрачный
@@ -204,7 +207,11 @@
                   </div>
                   <div class="item__price">
                     <div class="item__price-new">
-                      <p class="item__price-new-number item__price-new-number_big">2&thinsp;100&thinsp;047</p>
+                      <p
+                        class="item__price-new-number item__price-new-number_big"
+                      >
+                        2&thinsp;100&thinsp;047
+                      </p>
                       <p class="item__price-new-currency">сом</p>
                     </div>
                     <p class="item__price-old">2&thinsp;300&thinsp;047 сом</p>
@@ -227,12 +234,15 @@
                       <img
                         class="item__image"
                         src="<%=require('./images/pencils.png')%>"
-                        alt=""
+                        alt="Карандаши цветные"
                       />
                     </a>
                   </div>
                   <div class="item__good-info">
-                    <p class="item__good-title">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber&#8209;Castell</p>
+                    <p class="item__good-title">
+                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                      заточенные, шестигранные, Faber&#8209;Castell
+                    </p>
                     <div class="item__vendor">
                       <p class="item__warehouse">Коледино WB</p>
                       <div class="item__company-info">
@@ -276,7 +286,9 @@
               </li>
             </ul>
             <div class="cart-items__accordion">
-              <p class="cart-items__unavailable-heading">Отсутствуют · 3 товара</p>
+              <p class="cart-items__unavailable-heading">
+                Отсутствуют · 3 товара
+              </p>
               <button class="cart-items__accordion-btn" type="button"></button>
             </div>
             <ul class="cart-items__list">
@@ -287,7 +299,7 @@
                       <img
                         class="item__image item__image_unavailable"
                         src="<%=require('./images/t-shirt.png')%>"
-                        alt=""
+                        alt="Футболка UZcotton мужская"
                       />
                     </a>
                   </div>
@@ -319,12 +331,15 @@
                       <img
                         class="item__image item__image_unavailable"
                         src="<%=require('./images/iphone-case.png')%>"
-                        alt=""
+                        alt="Силиконовый чехол"
                       />
                     </a>
                   </div>
                   <div class="item__good-info item__good-info_unavailable">
-                    <p class="item__good-title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                    <p class="item__good-title">
+                      Силиконовый чехол картхолдер (отверстия) для карт,
+                      прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                    </p>
                     <div class="item__good-features">
                       <p class="item__good-feature" id="item-color">
                         Цвет: прозрачный
@@ -348,12 +363,15 @@
                       <img
                         class="item__image item__image_unavailable"
                         src="<%=require('./images/pencils.png')%>"
-                        alt=""
+                        alt="Карандаши цветные"
                       />
                     </a>
                   </div>
                   <div class="item__good-info item__good-info_unavailable">
-                    <p class="item__good-title">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber&#8209;Castell</p>
+                    <p class="item__good-title">
+                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                      заточенные, шестигранные, Faber&#8209;Castell
+                    </p>
                   </div>
                 </div>
                 <div class="item__calc item__calc_unavailable">
@@ -367,7 +385,72 @@
               </li>
             </ul>
           </section>
-          <section class="delivery"></section>
+          <section class="delivery cart-section">
+            <div class="cart-section__header">
+              <h3 class="cart-section__heading">Способ доставки</h3>
+              <button class="cart-section__change-btn">Изменить</button>
+            </div>
+            <div class="delivery__content">
+              <div class="delivery__field">
+                <p class="delivery__option">Пункт выдачи</p>
+                <div class="delivery__address-info address-info">
+                  <p class="address-info__address">
+                    Бишкек, улица Ахматбека Суюмбаева, 12/1
+                  </p>
+                  <div class="address-info__pickup-point-info">
+                    <div class="address-info__pickup-point-rating">
+                      <div class="address-info__pickup-point-star"></div>
+                      <p class="address-info__pickup-point-grade">4.99</p>
+                    </div>
+                    <p class="address-info__pickup-point-hours">
+                      Ежедневно с 10 до 21
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="delivery__field">
+                <p class="delivery__option">Стоимость доставки</p>
+                <p class="delivery__cost">Бесплатно</p>
+              </div>
+              <div class="delivery__field">
+                <p class="delivery__option">5—6 февраля</p>
+                <ul class="delivery__items-list">
+                  <li class="delivery__item">
+                    <img
+                      src="<%=require('./images/t-shirt.png')%>"
+                      alt="Футболка UZcotton мужская"
+                    />
+                  </li>
+                  <li class="delivery__item">
+                    <div class="notification-badge">184</div>
+                    <img
+                      src="<%=require('./images/iphone-case.png')%>"
+                      alt="Силиконовый чехол"
+                    />
+                  </li>
+                  <li class="delivery__item">
+                    <div class="notification-badge">2</div>
+                    <img
+                      src="<%=require('./images/pencils.png')%>"
+                      alt="Карандаши цветные"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="delivery__field">
+                <p class="delivery__option">7—8 февраля</p>
+                <ul class="delivery__items-list">
+                  <li class="delivery__item">
+                    <div class="notification-badge">16</div>
+                    <img
+                      src="<%=require('./images/iphone-case.png')%>"
+                      alt="Силиконовый чехол"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
           <section class="payment"></section>
           <section class="recipient"></section>
           <section class="total"></section>
