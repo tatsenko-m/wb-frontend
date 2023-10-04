@@ -1,0 +1,10 @@
+.refusal__check {
+  background-image: url(../../../images/refusal-check-icon.svg);
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-top: -0.5px;
+}

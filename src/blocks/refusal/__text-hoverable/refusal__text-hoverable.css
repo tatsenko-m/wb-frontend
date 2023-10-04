@@ -1,0 +1,6 @@
+.refusal__text-hoverable {
+  color: #0CB477;
+  border-bottom: 1px dashed #CEF0E3;
+  cursor: pointer;
+  margin-left: 5px;
+}

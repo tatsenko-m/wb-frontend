@@ -7,3 +7,7 @@
   gap: 32px;
   margin-bottom: 39px;
 }
+
+.cart-items__list:last-of-type {
+  margin-bottom: 24px;
+}

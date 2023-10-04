@@ -27,6 +27,7 @@
 
 @import url(../blocks/notification-badge/notification-badge.css);
 @import url(../blocks/notification-badge/_delivery/notification-badge_delivery.css);
+@import url(../blocks/notification-badge/_delivery-modified/notification-badge_delivery-modified.css);
 
 @import url(../blocks/main/main.css);
 
@@ -102,3 +103,8 @@
 @import url(../blocks/address-info/__pickup-point-star/address-info__pickup-point-star.css);
 @import url(../blocks/address-info/__pickup-point-grade/address-info__pickup-point-grade.css);
 @import url(../blocks/address-info/__pickup-point-hours/address-info__pickup-point-hours.css);
+
+@import url(../blocks/refusal/refusal.css);
+@import url(../blocks/refusal/__check/refusal__check.css);
+@import url(../blocks/refusal/__text/refusal__text.css);
+@import url(../blocks/refusal/__text-hoverable/refusal__text-hoverable.css);
