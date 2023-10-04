@@ -119,3 +119,8 @@
 
 @import url(../blocks/recipient/recipient.css);
 @import url(../blocks/recipient/__fieldset/recipient__fieldset.css);
+@import url(../blocks/recipient/__field/recipient__field.css);
+@import url(../blocks/recipient/__label/recipient__label.css);
+@import url(../blocks/recipient/__input/recipient__input.css);
+@import url(../blocks/recipient/__error/recipient__error.css);
+@import url(../blocks/recipient/__caption/recipient__caption.css);

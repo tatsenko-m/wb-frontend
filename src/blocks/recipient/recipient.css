@@ -1,4 +1,6 @@
 .recipient {
   grid-column: 1;
   grid-row: 4;
+  padding-bottom: 10px;
+  padding-top: 16px;
 }

@@ -1,0 +1,13 @@
+.recipient__error {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #f55123;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
