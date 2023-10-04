@@ -85,9 +85,9 @@
                       />
                       <span class="checkbox-label__pseudo-item"></span>
                     </label>
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image"
+                        class="item-image__image"
                         src="<%=require('./images/t-shirt.png')%>"
                         alt="Футболка UZcotton мужская"
                       />
@@ -156,9 +156,9 @@
                       />
                       <span class="checkbox-label__pseudo-item"></span>
                     </label>
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image"
+                        class="item-image__image"
                         src="<%=require('./images/iphone-case.png')%>"
                         alt="Силиконовый чехол"
                       />
@@ -230,9 +230,9 @@
                       />
                       <span class="checkbox-label__pseudo-item"></span>
                     </label>
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image"
+                        class="item-image__image"
                         src="<%=require('./images/pencils.png')%>"
                         alt="Карандаши цветные"
                       />
@@ -295,9 +295,9 @@
               <li class="item item_unavailable">
                 <div class="item__good">
                   <div class="item__good-img-block">
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image item__image_unavailable"
+                        class="item-image__image item-image__image_unavailable"
                         src="<%=require('./images/t-shirt.png')%>"
                         alt="Футболка UZcotton мужская"
                       />
@@ -327,9 +327,9 @@
               <li class="item item_unavailable">
                 <div class="item__good">
                   <div class="item__good-img-block">
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image item__image_unavailable"
+                        class="item-image__image item-image__image_unavailable"
                         src="<%=require('./images/iphone-case.png')%>"
                         alt="Силиконовый чехол"
                       />
@@ -359,9 +359,9 @@
               <li class="item item_unavailable">
                 <div class="item__good">
                   <div class="item__good-img-block">
-                    <a class="item__image-link" href="#">
+                    <a class="item-image" href="#">
                       <img
-                        class="item__image item__image_unavailable"
+                        class="item-image__image item-image__image_unavailable"
                         src="<%=require('./images/pencils.png')%>"
                         alt="Карандаши цветные"
                       />
@@ -388,7 +388,7 @@
           <section class="delivery cart-section">
             <div class="cart-section__header">
               <h3 class="cart-section__heading">Способ доставки</h3>
-              <button class="cart-section__change-btn">Изменить</button>
+              <button class="cart-section__change-btn" type="button">Изменить</button>
             </div>
             <div class="delivery__content">
               <div class="delivery__field">
@@ -415,22 +415,25 @@
               <div class="delivery__field">
                 <p class="delivery__option">5—6 февраля</p>
                 <ul class="delivery__items-list">
-                  <li class="delivery__item">
+                  <li class="item-image delivery__item">
                     <img
+                      class="item-image__image"
                       src="<%=require('./images/t-shirt.png')%>"
                       alt="Футболка UZcotton мужская"
                     />
                   </li>
-                  <li class="delivery__item">
-                    <div class="notification-badge">184</div>
+                  <li class="item-image delivery__item">
+                    <div class="notification-badge notification-badge_delivery">184</div>
                     <img
+                      class="item-image__image"
                       src="<%=require('./images/iphone-case.png')%>"
                       alt="Силиконовый чехол"
                     />
                   </li>
-                  <li class="delivery__item">
-                    <div class="notification-badge">2</div>
+                  <li class="item-image delivery__item">
+                    <div class="notification-badge notification-badge_delivery">2</div>
                     <img
+                      class="item-image__image"
                       src="<%=require('./images/pencils.png')%>"
                       alt="Карандаши цветные"
                     />
@@ -440,15 +443,20 @@
               <div class="delivery__field">
                 <p class="delivery__option">7—8 февраля</p>
                 <ul class="delivery__items-list">
-                  <li class="delivery__item">
-                    <div class="notification-badge">16</div>
+                  <li class="item-image delivery__item">
+                    <div class="notification-badge notification-badge_delivery">16</div>
                     <img
+                      class="item-image__image"
                       src="<%=require('./images/iphone-case.png')%>"
                       alt="Силиконовый чехол"
                     />
                   </li>
                 </ul>
               </div>
+            </div>
+            <div class="delivery__refusal refusal">
+              <div class="refusal__check"></div>
+              <p class="refusal__text">Обратная доставка товаров на склад при отказе —<span class="refusal__text-hoverable">бесплатно</span></p>
             </div>
           </section>
           <section class="payment"></section>
@@ -470,8 +478,8 @@
               />
               <span class="checkbox-label__pseudo-item"></span>
             </label>
-            <a class="item__image-link" href="#">
-              <img class="item__image" src="/" alt="" />
+            <a class="item-image" href="#">
+              <img class="item-image__image" src="/" alt="" />
             </a>
           </div>
           <div class="item__good-info">

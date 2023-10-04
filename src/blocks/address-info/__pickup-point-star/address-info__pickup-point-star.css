@@ -1,0 +1,11 @@
+.address-info__pickup-point-star {
+  background-image: url(../../../images/star-icon.svg);
+  width: 12px;
+  height: 16px;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  padding: 2px 0;
+  box-sizing: border-box;
+}

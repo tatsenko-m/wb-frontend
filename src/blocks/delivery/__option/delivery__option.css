@@ -1,0 +1,13 @@
+.delivery__option {
+  min-width: 153px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}

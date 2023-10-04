@@ -1,0 +1,7 @@
+.cart-section__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}

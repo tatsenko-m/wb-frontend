@@ -1,0 +1,23 @@
+.cart-section__change-btn {
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #cb11ab;
+  text-align: right;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
+  transition: opacity 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-section__change-btn:hover {
+  opacity: 0.7;
+}

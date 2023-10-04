@@ -1,0 +1,4 @@
+.address-info__pickup-point-info {
+  display: flex;
+  gap: 8px;
+}
