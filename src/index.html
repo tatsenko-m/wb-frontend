@@ -388,7 +388,9 @@
           <section class="delivery cart-section">
             <div class="cart-section__header">
               <h3 class="cart-section__heading">Способ доставки</h3>
-              <button class="cart-section__change-btn" type="button">Изменить</button>
+              <button class="cart-section__change-btn" type="button">
+                Изменить
+              </button>
             </div>
             <div class="delivery__content">
               <div class="delivery__field">
@@ -423,7 +425,9 @@
                     />
                   </li>
                   <li class="item-image delivery__item">
-                    <div class="notification-badge notification-badge_delivery">184</div>
+                    <div class="notification-badge notification-badge_delivery">
+                      184
+                    </div>
                     <img
                       class="item-image__image"
                       src="<%=require('./images/iphone-case.png')%>"
@@ -431,7 +435,9 @@
                     />
                   </li>
                   <li class="item-image delivery__item">
-                    <div class="notification-badge notification-badge_delivery">2</div>
+                    <div class="notification-badge notification-badge_delivery">
+                      2
+                    </div>
                     <img
                       class="item-image__image"
                       src="<%=require('./images/pencils.png')%>"
@@ -444,7 +450,11 @@
                 <p class="delivery__option">7—8 февраля</p>
                 <ul class="delivery__items-list">
                   <li class="item-image delivery__item">
-                    <div class="notification-badge notification-badge_delivery notification-badge_delivery-modified">16</div>
+                    <div
+                      class="notification-badge notification-badge_delivery notification-badge_delivery-modified"
+                    >
+                      16
+                    </div>
                     <img
                       class="item-image__image"
                       src="<%=require('./images/iphone-case.png')%>"
@@ -456,13 +466,20 @@
             </div>
             <div class="refusal delivery__refusal">
               <div class="refusal__check"></div>
-              <p class="refusal__text">Обратная доставка товаров на склад при отказе —<span class="refusal__text-hoverable">бесплатно</span></p>
+              <p class="refusal__text">
+                Обратная доставка товаров на склад при отказе —<span
+                  class="refusal__text-hoverable"
+                  >бесплатно</span
+                >
+              </p>
             </div>
           </section>
           <section class="payment cart-section">
             <div class="cart-section__header">
               <h3 class="cart-section__heading">Способ оплаты</h3>
-              <button class="cart-section__change-btn" type="button">Изменить</button>
+              <button class="cart-section__change-btn" type="button">
+                Изменить
+              </button>
             </div>
             <div class="payment__card">
               <div class="card-logo card-logo_type_mir"></div>
@@ -474,37 +491,69 @@
           <section class="recipient cart-section">
             <div class="cart-section__header">
               <h3 class="cart-section__heading">Получатель</h3>
-              <fieldset class="recipient__fieldset">
-                <div class="recipient__field">
-                  <label class="recipient__label" for="name">Имя</label>
-                  <input class="recipient__input" name="name" id="name" type="text" placeholder="Имя">
-                  <span class="recipient__error">Проверьте правильность</span>
-                </div>
-                <div class="recipient__field">
-                  <label class="recipient__label" for="surname">Фамилия</label>
-                  <input class="recipient__input" name="surname" id="surname" type="text" placeholder="Фамилия">
-                  <span class="recipient__error">Проверьте правильность</span>
-                </div>
-              </fieldset>
-              <fieldset class="recipient__fieldset">
-                <div class="recipient__field">
-                  <label class="recipient__label" for="email">Почта</label>
-                  <input class="recipient__input" name="email" id="email" type="email" placeholder="Почта">
-                  <span class="recipient__error">Проверьте правильность</span>
-                </div>
-                <div class="recipient__field">
-                  <label class="recipient__label" for="phone">Телефон</label>
-                  <input class="recipient__input" name="phone" id="phone" type="tel" placeholder="Телефон">
-                  <span class="recipient__error">Проверьте правильность</span>
-                </div>
-                <div class="recipient__field">
-                  <label class="recipient__label" for="inn">ИНН</label>
-                  <input class="recipient__input" name="inn" id="inn" type="text" placeholder="ИНН">
-                  <span class="recipient__caption">Для таможенного оформления</span>
-                  <span class="recipient__error">Проверьте правильность</span>
-                </div>
-              </fieldset>
             </div>
+            <fieldset class="recipient__fieldset">
+              <div class="recipient__field">
+                <label class="recipient__label" for="name">Имя</label>
+                <input
+                  class="recipient__input"
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="Имя"
+                />
+                <span class="recipient__error">Проверьте правильность</span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="surname">Фамилия</label>
+                <input
+                  class="recipient__input"
+                  name="surname"
+                  id="surname"
+                  type="text"
+                  placeholder="Фамилия"
+                />
+                <span class="recipient__error">Проверьте правильность</span>
+              </div>
+            </fieldset>
+            <fieldset class="recipient__fieldset">
+              <div class="recipient__field">
+                <label class="recipient__label" for="email">Почта</label>
+                <input
+                  class="recipient__input"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Почта"
+                />
+                <span class="recipient__error">Проверьте правильность</span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="phone">Телефон</label>
+                <input
+                  class="recipient__input"
+                  name="phone"
+                  id="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                />
+                <span class="recipient__error">Проверьте правильность</span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="inn">ИНН</label>
+                <input
+                  class="recipient__input"
+                  name="inn"
+                  id="inn"
+                  type="text"
+                  placeholder="ИНН"
+                />
+                <span class="recipient__caption"
+                  >Для таможенного оформления</span
+                >
+                <span class="recipient__error">Проверьте правильность</span>
+              </div>
+            </fieldset>
           </section>
           <section class="total"></section>
         </div>

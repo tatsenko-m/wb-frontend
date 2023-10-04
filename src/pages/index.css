@@ -116,3 +116,6 @@
 
 @import url(../blocks/card-logo/card-logo.css);
 @import url(../blocks/card-logo/_type/card-logo_type_mir.css);
+
+@import url(../blocks/recipient/recipient.css);
+@import url(../blocks/recipient/__fieldset/recipient__fieldset.css);
