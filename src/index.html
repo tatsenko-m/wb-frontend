@@ -471,7 +471,41 @@
             </div>
             <p class="payment__caption">Спишем оплату с карты при получении</p>
           </section>
-          <section class="recipient"></section>
+          <section class="recipient cart-section">
+            <div class="cart-section__header">
+              <h3 class="cart-section__heading">Получатель</h3>
+              <fieldset class="recipient__fieldset">
+                <div class="recipient__field">
+                  <label class="recipient__label" for="name">Имя</label>
+                  <input class="recipient__input" name="name" id="name" type="text" placeholder="Имя">
+                  <span class="recipient__error">Проверьте правильность</span>
+                </div>
+                <div class="recipient__field">
+                  <label class="recipient__label" for="surname">Фамилия</label>
+                  <input class="recipient__input" name="surname" id="surname" type="text" placeholder="Фамилия">
+                  <span class="recipient__error">Проверьте правильность</span>
+                </div>
+              </fieldset>
+              <fieldset class="recipient__fieldset">
+                <div class="recipient__field">
+                  <label class="recipient__label" for="email">Почта</label>
+                  <input class="recipient__input" name="email" id="email" type="email" placeholder="Почта">
+                  <span class="recipient__error">Проверьте правильность</span>
+                </div>
+                <div class="recipient__field">
+                  <label class="recipient__label" for="phone">Телефон</label>
+                  <input class="recipient__input" name="phone" id="phone" type="tel" placeholder="Телефон">
+                  <span class="recipient__error">Проверьте правильность</span>
+                </div>
+                <div class="recipient__field">
+                  <label class="recipient__label" for="inn">ИНН</label>
+                  <input class="recipient__input" name="inn" id="inn" type="text" placeholder="ИНН">
+                  <span class="recipient__caption">Для таможенного оформления</span>
+                  <span class="recipient__error">Проверьте правильность</span>
+                </div>
+              </fieldset>
+            </div>
+          </section>
           <section class="total"></section>
         </div>
       </form>
