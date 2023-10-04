@@ -21,3 +21,9 @@
 .cart-section__change-btn:hover {
   opacity: 0.7;
 }
+
+@media screen and (max-width: 1024px) {
+  .cart-section__change-btn {
+    margin-right: 1.5px;
+  }
+}

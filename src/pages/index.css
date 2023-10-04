@@ -108,3 +108,11 @@
 @import url(../blocks/refusal/__check/refusal__check.css);
 @import url(../blocks/refusal/__text/refusal__text.css);
 @import url(../blocks/refusal/__text-hoverable/refusal__text-hoverable.css);
+
+@import url(../blocks/payment/payment.css);
+@import url(../blocks/payment/__card/payment__card.css);
+@import url(../blocks/payment/__card-field/payment__card-field.css);
+@import url(../blocks/payment/__caption/payment__caption.css);
+
+@import url(../blocks/card-logo/card-logo.css);
+@import url(../blocks/card-logo/_type/card-logo_type_mir.css);

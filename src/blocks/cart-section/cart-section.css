@@ -5,8 +5,3 @@
   border-radius: 16px;
 }
 
-@media screen and (max-width: 1024px) {
-  .cart-section {
-    max-width: 590px;
-  }
-}
