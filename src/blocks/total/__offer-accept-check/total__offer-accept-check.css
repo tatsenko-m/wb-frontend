@@ -8,4 +8,11 @@
   background-color: transparent;
   margin-left: 1px;
   margin-right: 1px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .total__offer-accept-check {
+    margin-left: 0;
+  }
 }
