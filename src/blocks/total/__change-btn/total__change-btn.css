@@ -1,0 +1,18 @@
+.total__change-btn {
+  background-image: url(../../../images/pen-icon.svg);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.total__change-btn:hover {
+  opacity: 0.7;
+}
