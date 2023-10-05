@@ -1,0 +1,5 @@
+.total__offer-accept {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}

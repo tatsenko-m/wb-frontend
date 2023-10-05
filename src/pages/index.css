@@ -142,3 +142,8 @@
 @import url(../blocks/total/__date/total__date.css);
 @import url(../blocks/total/__highlighted-block/total__highlighted-block.css);
 @import url(../blocks/total/__card/total__card.css);
+@import url(../blocks/total/__confirm-order/total__confirm-order.css);
+@import url(../blocks/total/__confirm-order-btn/total__confirm-order-btn.css);
+@import url(../blocks/total/__offer-accept/total__offer-accept.css);
+@import url(../blocks/total/__offer-accept-check/total__offer-accept-check.css);
+@import url(../blocks/total/__offer-accept-link/total__offer-accept-link.css);

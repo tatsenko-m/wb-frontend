@@ -1,0 +1,9 @@
+.total__offer-accept-check {
+  background-image: url(../../../images/offer-accept-check-icon.svg);
+  width: 13px;
+  height: 24px;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
