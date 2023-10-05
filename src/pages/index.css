@@ -130,6 +130,7 @@
 @import url(../blocks/total/__order-details/total__order-details.css);
 @import url(../blocks/total/__calculations/total__calculations.css);
 @import url(../blocks/total/__header/total__header.css);
+@import url(../blocks/total/__heading-currency/total__heading-currency.css);
 @import url(../blocks/total/__calculations-fields/total__calculations-fields.css);
 @import url(../blocks/total/__calculations-field/total__calculations-field.css);
 @import url(../blocks/total/__calculations-text/total__calculations-text.css);
