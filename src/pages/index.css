@@ -148,6 +148,7 @@
 @import url(../blocks/total/__offer-accept/total__offer-accept.css);
 @import url(../blocks/total/__offer-accept-check/total__offer-accept-check.css);
 @import url(../blocks/total/__offer-accept-link/total__offer-accept-link.css);
-@import url(../blocks/total/__refusal-check/total__refusal-check.css);
-@import url(../blocks/total/__refusal-text/total__refusal-text.css);
 @import url(../blocks/total/__refusal-text-hoverable/total__refusal-text-hoverable.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
