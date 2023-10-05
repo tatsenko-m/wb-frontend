@@ -9,7 +9,7 @@
 
 .footer::after {
   width: 100%;
-  height: 24px;
+  height: 24.5px;
   content: "";
   background-color: #F6F6FA;
   border-radius: 0 0 24px 24px;
