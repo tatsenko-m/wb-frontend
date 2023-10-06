@@ -11,5 +11,6 @@
     grid-area: unset;
     grid-column: 1;
     grid-row: span 2;
+    position: relative;
   }
 }

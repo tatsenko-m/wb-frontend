@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+  .checkbox-label_type_check-item  {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+  }
+}
