@@ -17,3 +17,11 @@
     padding: 16.5px 24px 24px 24.5px;
   }
 }
+
+@media screen and (max-width: 1023px) {
+  .total {
+    grid-column: 1;
+    grid-row: 5;
+    max-width: 100%;
+  }
+}
