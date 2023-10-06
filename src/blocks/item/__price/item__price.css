@@ -5,4 +5,5 @@
   align-items: flex-end;
   gap: 5px;
   margin-top: -3px;
+  grid-area: price;
 }

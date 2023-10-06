@@ -1,5 +1,7 @@
 .item__good-img-block {
   display: flex;
+  max-height: 96px;
   gap: 12px;
   align-items: center;
+  grid-area: img;
 }

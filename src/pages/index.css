@@ -54,7 +54,6 @@
 
 @import url(../blocks/item/item.css);
 @import url(../blocks/item/_unavailable/item_unavailable.css);
-@import url(../blocks/item/__good/item__good.css);
 @import url(../blocks/item/__good-img-block/item__good-img-block.css);
 @import url(../blocks/item/__good-info/item__good-info.css);
 @import url(../blocks/item/__good-info/_unavailable/item__good-info_unavailable.css);
