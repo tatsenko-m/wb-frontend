@@ -5,3 +5,11 @@
   align-items: center;
   grid-area: img;
 }
+
+@media screen and (max-width: 767px) {
+  .item__good-img-block {
+    grid-area: unset;
+    grid-column: 1;
+    grid-row: span 2;
+  }
+}

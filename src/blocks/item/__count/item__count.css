@@ -4,3 +4,12 @@
   gap: 8px;
   grid-area: count;
 }
+
+@media screen and (max-width: 767px) {
+  .item__count {
+    grid-area: unset;
+    grid-column: span 2;
+    grid-row: 3;
+  }
+}
+
