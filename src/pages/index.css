@@ -69,6 +69,7 @@
 @import url(../blocks/item/__company-details-icon/item__company-details-icon.css);
 @import url(../blocks/item/__count/item__count.css);
 @import url(../blocks/item/__count/_unavailable/item__count_unavailable.css);
+@import url(../blocks/item/__count/_no-warning/item__count_no-warning.css);
 @import url(../blocks/item/__count-warning/item__count-warning.css);
 @import url(../blocks/item/__actions/item__actions.css);
 @import url(../blocks/item/__like-btn/item__like-btn.css);
