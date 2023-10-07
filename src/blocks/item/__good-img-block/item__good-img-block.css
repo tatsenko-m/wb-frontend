@@ -12,5 +12,6 @@
     grid-column: 1;
     grid-row: span 2;
     position: relative;
+    max-height: 106px;
   }
 }

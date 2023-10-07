@@ -27,3 +27,10 @@
   border-radius: inherit;
   opacity: 0.5;
 }
+
+@media screen and (max-width: 767px) {
+  .item-image {
+    width: 80px;
+    height: 106px;
+  }
+}
