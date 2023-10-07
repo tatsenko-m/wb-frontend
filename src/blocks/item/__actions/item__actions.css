@@ -5,3 +5,11 @@
   padding: 0;
   align-self: flex-end;
 }
+
+@media screen and (max-width: 767px) {
+  .item__actions {
+    align-self: unset;
+    gap: 24px;
+    margin-left: auto;
+  }
+}

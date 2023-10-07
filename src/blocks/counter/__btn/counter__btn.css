@@ -17,3 +17,10 @@
   cursor: pointer;
   padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .counter__btn {
+    height: 14px;
+    line-height: 14px;
+  }
+}

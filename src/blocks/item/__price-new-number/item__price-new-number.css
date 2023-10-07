@@ -12,3 +12,10 @@
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .item__price-new-number {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

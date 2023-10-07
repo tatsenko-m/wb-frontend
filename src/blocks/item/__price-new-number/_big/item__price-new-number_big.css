@@ -4,3 +4,9 @@
   margin-bottom: 2px;
   padding-top: 2px;
 }
+
+@media screen and (max-width: 767px) {
+  .item__price-new-number_big {
+    margin-bottom: 0;
+  }
+}

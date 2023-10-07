@@ -1,0 +1,9 @@
+.item__good-feature_type_size {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .item__good-feature_type_size  {
+    display: none;
+  }
+}

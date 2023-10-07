@@ -20,3 +20,12 @@
   appearance: none;
   margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .counter__input {
+    width: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    height: 14px;
+  }
+}

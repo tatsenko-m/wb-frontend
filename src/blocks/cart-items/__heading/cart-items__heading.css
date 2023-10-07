@@ -11,3 +11,12 @@
   margin: 0 0 27px;
   padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .cart-items__heading {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: -9px;
+    margin-bottom: 17px;
+  }
+}

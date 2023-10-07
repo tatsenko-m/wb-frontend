@@ -11,3 +11,10 @@
 .cart-items__list:last-of-type {
   margin-bottom: 24px;
 }
+
+@media screen and (max-width: 767px) {
+  .cart-items__list {
+    gap: 28px;
+    padding: 12px 0 0;
+  }
+}

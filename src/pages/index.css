@@ -61,6 +61,7 @@
 @import url(../blocks/item/__good-title/item__good-title.css);
 @import url(../blocks/item/__good-features/item__good-features.css);
 @import url(../blocks/item/__good-feature/item__good-feature.css);
+@import url(../blocks/item/__good-feature/_type/item__good-feature_type_size.css);
 @import url(../blocks/item/__vendor/item__vendor.css);
 @import url(../blocks/item/__warehouse/item__warehouse.css);
 @import url(../blocks/item/__company-info/item__company-info.css);
@@ -78,6 +79,7 @@
 @import url(../blocks/item/__price-new-number/_big/item__price-new-number_big.css);
 @import url(../blocks/item/__price-new-currency/item__price-new-currency.css);
 @import url(../blocks/item/__price-old/item__price-old.css);
+@import url(../blocks/item/__bottom-label/item__bottom-label.css);
 
 @import url(../blocks/counter/counter.css);
 @import url(../blocks/counter/__btn/counter__btn.css);

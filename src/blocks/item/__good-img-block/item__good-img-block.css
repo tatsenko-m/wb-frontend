@@ -13,5 +13,6 @@
     grid-row: span 2;
     position: relative;
     max-height: 106px;
+    margin-bottom: 10px;
   }
 }

@@ -9,3 +9,17 @@
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .item__good-title {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 192px;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines, 2);
+    text-overflow: ellipsis;
+  }
+}

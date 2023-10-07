@@ -3,8 +3,15 @@
   width: 100px;
   min-height: 44px;
   padding: 8px 6px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 8px;
   box-sizing: border-box;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .counter {
+    min-height: 32px;
+    max-width: 80px;
+  }
 }

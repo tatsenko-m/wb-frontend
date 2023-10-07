@@ -1,0 +1,28 @@
+.item__bottom-label {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .item__bottom-label {
+    display: flex;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background-color: #FFF;
+    border-radius: 6px;
+    height: 22px;
+    max-width: 72px;
+    overflow: hidden;
+    padding: 0 4px 3px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
