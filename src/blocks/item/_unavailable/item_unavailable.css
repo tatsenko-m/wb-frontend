@@ -1,3 +1,19 @@
 .item_unavailable:last-of-type {
   margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .item_unavailable {
+    margin-bottom: -8px;
+  }
+  .item_unavailable:not(:last-of-type)::after {
+    width: 100%;
+    height: 8px;
+    content: "";
+    background-color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+  }
+}

@@ -1,4 +1,10 @@
 .item__good-info_unavailable {
   max-width: 309px;
-  color: #9797AF;
+  color: #9797af;
+}
+
+@media screen and (max-width: 767px) {
+  .item__good-info_unavailable {
+    grid-row: 1 / span 2;
+  }
 }
