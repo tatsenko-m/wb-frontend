@@ -13,7 +13,11 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
-    max-width: 284px;
   }
 }
 
+@media screen and (max-width: 320px) {
+  .item__count {
+    max-width: 284px;
+  }
+}
