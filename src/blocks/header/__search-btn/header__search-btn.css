@@ -23,5 +23,9 @@
 @media screen and (max-width: 767px) {
   .header__search-btn {
     display: inline-block;
+    background-image: url(../../../images/search-icon-bold.svg);
+    width: 28px;
+    height: 28px;
+    margin-right: 0;
   }
 }
