@@ -7,3 +7,9 @@
     margin-left: 2px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .total__refusal-text-hoverable {
+    margin-left: 4.5px;
+  }
+}

@@ -10,3 +10,9 @@
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .refusal__text {
+    margin-top: 0.5px;
+  }
+}

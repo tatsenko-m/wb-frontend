@@ -5,3 +5,9 @@
   align-items: stretch;
   gap: 24px;
 }
+
+@media screen and (max-width: 767px) {
+  .total__order-details {
+    gap: 16.5px;
+  }
+}

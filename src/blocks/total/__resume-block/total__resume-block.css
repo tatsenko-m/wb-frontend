@@ -4,3 +4,9 @@
   flex-direction: column;
   gap: 4px;
 }
+
+@media screen and (max-width: 767px) {
+  .total__resume-block {
+    display: none;
+  }
+}
