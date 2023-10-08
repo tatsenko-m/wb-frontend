@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+  .delivery__refusal {
+    max-width: 272px;
+  }
+}

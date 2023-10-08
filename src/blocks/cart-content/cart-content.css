@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 1023px) {
   .cart-content {
-    width: calc(100% - 32px);
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, minmax(max-content, auto));
   }

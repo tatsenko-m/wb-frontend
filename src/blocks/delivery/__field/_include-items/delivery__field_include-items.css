@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+  .delivery__field_include-items {
+    gap: 12px;
+  }
+  .delivery__field_include-items:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+}

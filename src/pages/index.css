@@ -94,10 +94,12 @@
 @import url(../blocks/delivery/delivery.css);
 @import url(../blocks/delivery/__content/delivery__content.css);
 @import url(../blocks/delivery/__field/delivery__field.css);
+@import url(../blocks/delivery/__field/_include-items/delivery__field_include-items.css);
 @import url(../blocks/delivery/__option/delivery__option.css);
 @import url(../blocks/delivery/__cost/delivery__cost.css);
 @import url(../blocks/delivery/__items-list/delivery__items-list.css);
 @import url(../blocks/delivery/__item/delivery__item.css);
+@import url(../blocks/delivery/__refusal/delivery__refusal.css);
 
 @import url(../blocks/address-info/address-info.css);
 @import url(../blocks/address-info/__address/address-info__address.css);

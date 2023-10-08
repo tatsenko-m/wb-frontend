@@ -5,3 +5,9 @@
   align-items: baseline;
   margin-bottom: 16px;
 }
+
+@media screen and (max-width: 767px) {
+  .cart-section__header {
+    margin-bottom: 8px;
+  }
+}

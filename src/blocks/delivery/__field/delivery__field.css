@@ -2,3 +2,10 @@
   display: flex;
   gap: 32px;
 }
+
+@media screen and (max-width: 767px) {
+  .delivery__field {
+    flex-direction: column;
+    gap: 0;
+  }
+}
