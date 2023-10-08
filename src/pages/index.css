@@ -28,6 +28,7 @@
 @import url(../blocks/notification-badge/notification-badge.css);
 @import url(../blocks/notification-badge/_delivery/notification-badge_delivery.css);
 @import url(../blocks/notification-badge/_delivery-modified/notification-badge_delivery-modified.css);
+@import url(../blocks/notification-badge/_navbar-mobile/notification-badge_navbar-mobile.css);
 
 @import url(../blocks/main/main.css);
 
@@ -157,3 +158,13 @@
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
+
+@import url(../blocks/navbar-mobile/navbar-mobile.css);
+@import url(../blocks/navbar-mobile/__list/navbar-mobile__list.css);
+@import url(../blocks/navbar-mobile/__item/navbar-mobile__item.css);
+@import url(../blocks/navbar-mobile/__link/navbar-mobile__link.css);
+@import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_main.css);
+@import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_catalog.css);
+@import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_cart.css);
+@import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_favorites.css);
+@import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_profile.css);

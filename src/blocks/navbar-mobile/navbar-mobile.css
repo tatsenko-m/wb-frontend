@@ -1,0 +1,17 @@
+.navbar-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  padding: 14px 13px;
+  box-sizing: border-box;
+  z-index: 3;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-mobile {
+    display: block;
+  }
+}
