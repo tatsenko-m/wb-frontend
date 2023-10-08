@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+  .recipient__header {
+    margin-bottom: 2.5px;
+  }
+}

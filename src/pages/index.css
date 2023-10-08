@@ -123,6 +123,7 @@
 @import url(../blocks/card-logo/_type/card-logo_type_mir.css);
 
 @import url(../blocks/recipient/recipient.css);
+@import url(../blocks/recipient/__header/recipient__header.css);
 @import url(../blocks/recipient/__fieldset/recipient__fieldset.css);
 @import url(../blocks/recipient/__field/recipient__field.css);
 @import url(../blocks/recipient/__label/recipient__label.css);
