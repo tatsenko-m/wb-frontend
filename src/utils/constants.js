@@ -17,6 +17,7 @@ export const companyInfo = {
 
 export const initialItems = [
   {
+    image: './images/t-shirt.png',
     name: "Футболка UZcotton мужская",
     features: [
       { name: "Цвет", value: "белый" },
@@ -29,6 +30,7 @@ export const initialItems = [
     newPrice: 522,
   },
   {
+    image: './images/iphone-case.png',
     name: "Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe",
     features: [{ name: "Цвет", value: "прозрачный" }],
     warehouse: "Коледино WB",
@@ -38,6 +40,7 @@ export const initialItems = [
     newPrice: 10500.235,
   },
   {
+    image: './images/pencils.png',
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber&#8209;Castell',
     features: [],
     warehouse: "Коледино WB",
