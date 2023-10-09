@@ -13,5 +13,5 @@ function renderItems(itemsArr, listSelector, templateSelector, isUnavailable) {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderItems(initialItems, "#added-items", "#item-template", false);
-  // renderItems(initialItems, "#unavailable-items", "#item-template", true);
+  renderItems(initialItems, "#unavailable-items", "#item-template", true);
 });
