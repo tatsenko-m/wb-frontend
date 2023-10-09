@@ -47,10 +47,10 @@ class ItemCard {
     );
     if (!featuresContainer) return;
 
-    if (this._data.features.length === 0) {
+    if (this._data?.features.length === 0) {
       featuresContainer.remove();
     } else {
-      this._data.features.forEach((feature) => {
+      this._data?.features.forEach((feature) => {
         const featureElement = document.createElement("p");
         featureElement.classList.add("item__good-feature");
         if (feature.name === "Размер") {
@@ -95,14 +95,14 @@ class ItemCard {
     const newCost = this._newPrice * this._itemCounterInput.value;
 
     if (oldCost >= 1000) {
-      this._itemOldCostElement.textContent =
+      this._itemOldCostElement.innerHTML =
         formatNumberWithThinSpace(oldCost) + " сом";
     } else {
       this._itemOldCostElement.textContent = oldCost + " сом";
     }
 
     if (newCost >= 1000) {
-      this._itemNewCostElement.textContent = formatNumberWithThinSpace(newCost);
+      this._itemNewCostElement.innerHTML = formatNumberWithThinSpace(newCost);
       this._itemNewCostElement.classList.add("item__price-new-number_big");
     } else {
       this._itemNewCostElement.textContent = newCost.toString();
@@ -121,9 +121,9 @@ class ItemCard {
     );
     this._itemCounterInput = this._element.querySelector(".counter__input");
 
-    this._itemImageElement.src = `<%=require(${this._image})%>`;
+    this._itemImageElement.src = this._image;
     this._itemImageElement.alt = this._name;
-    this._itemTitleElement.textContent = this._name;
+    this._itemTitleElement.innerHTML = this._name;
     this._fillFeatures();
     this._itemWarehouseElement.textContent = this._warehouse;
     this._itemCompanyElement.textContent = this._companyInfo?.shortName;
