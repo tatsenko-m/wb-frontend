@@ -660,12 +660,11 @@
           ></a>
         </li>
         <li class="navbar-mobile__item">
-          <a
-            class="navbar-mobile__link navbar-mobile__link_type_cart"
-            href="#"
-          >
-          <div class="notification-badge notification-badge_navbar-mobile">3</div>
-        </a>
+          <a class="navbar-mobile__link navbar-mobile__link_type_cart" href="#">
+            <div class="notification-badge notification-badge_navbar-mobile">
+              3
+            </div>
+          </a>
         </li>
         <li class="navbar-mobile__item">
           <a
@@ -684,7 +683,7 @@
     <template id="item-template">
       <li class="item">
         <div class="item__good-img-block">
-          <label class="checkbox-label">
+          <label class="checkbox-label checkbox-label_type_check-item">
             <input
               type="checkbox"
               class="checkbox-label__invisible-item"
@@ -699,13 +698,7 @@
         </div>
         <div class="item__good-info">
           <p class="item__good-title"></p>
-          <div class="item__good-features">
-            <p class="item__good-feature" id="item-color"></p>
-            <p
-              class="item__good-feature item__good-feature_type_size"
-              id="item-size"
-            ></p>
-          </div>
+          <div class="item__good-features"></div>
           <div class="item__vendor">
             <p class="item__warehouse"></p>
             <div class="item__company-info">
@@ -714,17 +707,16 @@
             </div>
           </div>
         </div>
-        <div class="item__count">
+        <div class="item__count item__count_no-warning">
           <div class="counter">
             <button class="counter__btn counter__minus-btn" type="button">
               −
             </button>
-            <input type="number" class="counter__input" />
+            <input type="number" class="counter__input" value="" />
             <button class="counter__btn counter__plus-btn" type="button">
               +
             </button>
           </div>
-          <p class="item__count-warning"></p>
           <div class="item__actions">
             <button class="item__like-btn" type="button"></button>
             <button class="item__delete-btn" type="button"></button>
@@ -733,7 +725,7 @@
         <div class="item__price">
           <div class="item__price-new">
             <p class="item__price-new-number"></p>
-            <p class="item__price-new-currency"></p>
+            <p class="item__price-new-currency">сом</p>
           </div>
           <p class="item__price-old"></p>
         </div>
