@@ -14,8 +14,6 @@ class ItemCard {
     },
     templateSelector,
     isUnavailable
-    // handleDelButtonClick,
-    // handleLikeItemCard
   ) {
     this._image = image;
     this._name = name;
@@ -28,8 +26,7 @@ class ItemCard {
     this._newPrice = newPrice;
     this._templateSelector = templateSelector;
     this._isUnavailable = isUnavailable;
-    // this._handleDelButtonClick = handleDelButtonClick;
-    // this._handleLikeItemCard = handleLikeItemCard;
+    this._isLiked = false;
   }
 
   _getTemplate() {
@@ -47,10 +44,10 @@ class ItemCard {
     );
     if (!featuresContainer) return;
 
-    if (this._data?.features.length === 0) {
+    if (this._features.length === 0) {
       featuresContainer.remove();
     } else {
-      this._data?.features.forEach((feature) => {
+      this._features.forEach((feature) => {
         const featureElement = document.createElement("p");
         featureElement.classList.add("item__good-feature");
         if (feature.name === "Размер") {
@@ -129,6 +126,7 @@ class ItemCard {
     this._itemCompanyElement.textContent = this._companyInfo?.shortName;
     this._setQuantityWarning();
     this._setCosts();
+    this._setEventListeners();
 
     if (this._isUnavailable) {
       this._element.querySelector(".checkbox-label").remove();
@@ -148,35 +146,34 @@ class ItemCard {
     return this._element;
   }
 
-  // handleDeleteItemCard() {
-  //   this._element.remove();
-  //   this._element = null;
-  // }
+  _deleteItemCard() {
+    this._element.remove();
+    this._element = null;
+  }
 
-  // _setEventListeners() {
-  //   this._likeButtonElement = this._element.querySelector(".card__like-button");
-  //   this._deleteButtonElement = this._element.querySelector(
-  //     ".card__delete-button"
-  //   );
-  //   this._likeCounter = this._element.querySelector(".card__like-counter");
+  _toggleLike() {
+    this._isLiked = !this._isLiked;
 
-  //   if (this._ownerId !== this._userId) {
-  //     this._deleteButtonElement.remove();
-  //     this._deleteButtonElement = null;
-  //   } else {
-  //     this._deleteButtonElement.addEventListener("click", () => {
-  //       this._handleDelButtonClick();
-  //     });
-  //   }
+    if (this._isLiked) {
+      this._likeButtonElement.classList.add("item__like-btn_active");
+    } else {
+      this._likeButtonElement.classList.remove("item__like-btn_active");
+    }
+  }
 
-  //   this._cardImageElement.addEventListener("click", () => {
-  //     this._handleCardClick(this._name, this._link);
-  //   });
+  _setEventListeners() {
+    this._likeButtonElement = this._element.querySelector(".item__like-btn");
+    this._deleteButtonElement =
+      this._element.querySelector(".item__delete-btn");
 
-  //   this._likeButtonElement.addEventListener("click", () => {
-  //     this._handleLikeCard(this._cardId);
-  //   });
-  // }
+    this._deleteButtonElement.addEventListener("click", () => {
+      this._deleteItemCard();
+    });
+
+    this._likeButtonElement.addEventListener("click", () => {
+      this._toggleLike();
+    });
+  }
 }
 
 export default ItemCard;

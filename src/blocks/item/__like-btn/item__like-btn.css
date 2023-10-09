@@ -9,4 +9,9 @@
   padding: 0;
   cursor: pointer;
   border: none;
+  transition: background-image 0.5s;
+}
+
+.item__like-btn:hover {
+  background-image: url(../../../images/like-icon-active.svg);
 }

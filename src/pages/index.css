@@ -74,6 +74,7 @@
 @import url(../blocks/item/__count-warning/item__count-warning.css);
 @import url(../blocks/item/__actions/item__actions.css);
 @import url(../blocks/item/__like-btn/item__like-btn.css);
+@import url(../blocks/item/__like-btn/_active/item__like-btn_active.css);
 @import url(../blocks/item/__delete-btn/item__delete-btn.css);
 @import url(../blocks/item/__price/item__price.css);
 @import url(../blocks/item/__price-new/item__price-new.css);
