@@ -153,12 +153,10 @@ class ItemCard {
 
   _toggleLike() {
     this._isLiked = !this._isLiked;
-
-    if (this._isLiked) {
-      this._likeButtonElement.classList.add("item__like-btn_active");
-    } else {
-      this._likeButtonElement.classList.remove("item__like-btn_active");
-    }
+    this._likeButtonElement.classList.toggle(
+      "item__like-btn_active",
+      this._isLiked
+    );
   }
 
   _setEventListeners() {
