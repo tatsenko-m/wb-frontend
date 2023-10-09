@@ -163,6 +163,7 @@ class ItemCard {
     this._likeButtonElement = this._element.querySelector(".item__like-btn");
     this._deleteButtonElement =
       this._element.querySelector(".item__delete-btn");
+    this._actionsElement = this._element.querySelector(".item__actions");
 
     this._deleteButtonElement.addEventListener("click", () => {
       this._deleteItemCard();
@@ -170,6 +171,14 @@ class ItemCard {
 
     this._likeButtonElement.addEventListener("click", () => {
       this._toggleLike();
+    });
+
+    this._element.addEventListener('mouseenter', () => {
+      this._actionsElement.style.visibility = 'visible';
+    });
+
+    this._element.addEventListener('mouseleave', () => {
+      this._actionsElement.style.visibility = 'hidden';
     });
   }
 }
