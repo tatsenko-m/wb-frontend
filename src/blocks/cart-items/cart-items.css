@@ -4,6 +4,13 @@
   padding-top: 11px;
 }
 
+@media screen and (max-width: 1023px) {
+  .cart-items {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .cart-items {
     padding-top: 0px;
