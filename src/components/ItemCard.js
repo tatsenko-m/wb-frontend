@@ -182,7 +182,7 @@ class ItemCard {
       this._setBottomLabel();
     }
     if (!this._isUnavailable) {
-      this._counter = new Counter(counterContainer, this._maxQuantity, this);
+      this._counter = new Counter(counterContainer, this._maxQuantity, this, this._updateCartFunc);
     }
 
     return this._element;

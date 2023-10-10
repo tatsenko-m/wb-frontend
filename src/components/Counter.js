@@ -1,5 +1,5 @@
 class Counter {
-  constructor(containerElement, maxQuantity, itemCardInstance) {
+  constructor(containerElement, maxQuantity, itemCardInstance, updateCartFunc) {
     this._maxQuantity = maxQuantity;
     this._containerElement = containerElement;
     this._input = this._containerElement.querySelector(".counter__input");
@@ -9,15 +9,16 @@ class Counter {
       ".counter__minus-btn"
     );
     this._itemCardInstance = itemCardInstance;
+    this._updateCartFunc = updateCartFunc;
 
-    this._plusButton.addEventListener(
-      "click",
-      this._handlePlusClick.bind(this)
-    );
-    this._minusButton.addEventListener(
-      "click",
-      this._handleMinusClick.bind(this)
-    );
+    this._plusButton.addEventListener("click", () => {
+      this._handlePlusClick();
+      this._updateCartFunc();
+    });
+    this._minusButton.addEventListener("click", () => {
+      this._handleMinusClick();
+      this._updateCartFunc();
+    });
 
     this._updateButtonStyles(parseInt(this._input.value));
     this._input.addEventListener("input", this._handleInput.bind(this));
