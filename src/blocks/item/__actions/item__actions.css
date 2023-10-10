@@ -12,5 +12,6 @@
     align-self: unset;
     gap: 24px;
     margin-left: auto;
+    visibility: visible;
   }
 }

@@ -1,6 +1,6 @@
 .total {
-  grid-column: 2;
-  grid-row: 1;
+  max-width: 429px;
+  min-width: 303px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -9,20 +9,24 @@
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   z-index: 1;
   margin-top: -2px;
+  margin-left: auto;
+  flex: 0.325;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
   .total {
+    padding: 16.5px 24px 24px;
     max-width: 255px;
-    padding: 16.5px 24px 24px 24.5px;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 1023px) {
   .total {
-    grid-column: 1;
-    grid-row: 5;
     max-width: 100%;
+    width: 100%;
+    margin-left: 0;
   }
 }
 

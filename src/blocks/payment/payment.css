@@ -1,4 +1,20 @@
-.payment {
-  grid-column: 1;
-  grid-row: 3;
+@media screen and (max-width: 1024px) {
+  .payment {
+    max-width: 640px;
+    padding-right: 24.5px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .payment {
+    max-width: none;
+    padding: 16.5px 24px 24;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .payment {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

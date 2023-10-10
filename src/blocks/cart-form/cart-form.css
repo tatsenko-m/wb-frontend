@@ -1,0 +1,15 @@
+.cart-form {
+  width: calc(100% - 48px);
+  max-width: 1352px;
+  display: flex;
+  gap: 32px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .cart-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

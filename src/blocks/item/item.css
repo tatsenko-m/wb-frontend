@@ -12,6 +12,7 @@
 @media screen and (max-width: 767px) {
   .item {
     grid-template-areas: none;
+    grid-template-columns: 80px max-content;
     grid-template-rows: 24px max-content 32px;
     row-gap: 2px;
     position: relative;
@@ -31,8 +32,3 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .item {
-    grid-template-columns: 80px max-content;
-  }
-}

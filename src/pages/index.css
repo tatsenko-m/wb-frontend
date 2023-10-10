@@ -32,6 +32,8 @@
 
 @import url(../blocks/main/main.css);
 
+@import url(../blocks/cart-form/cart-form.css);
+
 @import url(../blocks/cart-content/cart-content.css);
 
 @import url(../blocks/cart-items/cart-items.css);

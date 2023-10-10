@@ -91,14 +91,14 @@ class ItemCard {
     const oldCost = this._oldPrice * this._itemCounterInput.value;
     const newCost = this._newPrice * this._itemCounterInput.value;
 
-    if (oldCost >= 1000) {
+    if (oldCost >= 10000) {
       this._itemOldCostElement.innerHTML =
         formatNumberWithThinSpace(oldCost) + " сом";
     } else {
       this._itemOldCostElement.textContent = oldCost + " сом";
     }
 
-    if (newCost >= 1000) {
+    if (newCost >= 10000) {
       this._itemNewCostElement.innerHTML = formatNumberWithThinSpace(newCost);
       this._itemNewCostElement.classList.add("item__price-new-number_big");
     } else {
