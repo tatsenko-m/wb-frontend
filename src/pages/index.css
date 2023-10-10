@@ -40,6 +40,7 @@
 @import url(../blocks/cart-items/__heading/cart-items__heading.css);
 @import url(../blocks/cart-items/__accordion/cart-items__accordion.css);
 @import url(../blocks/cart-items/__accordion-btn/cart-items__accordion-btn.css);
+@import url(../blocks/cart-items/__accordion-btn/_active/cart-items__accordion-btn_active.css);
 @import url(../blocks/cart-items/__list/cart-items__list.css);
 @import url(../blocks/cart-items/__unavailable-heading/cart-items__unavailable-heading.css);
 

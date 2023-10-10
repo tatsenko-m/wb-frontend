@@ -5,9 +5,6 @@ import ItemCard from "../components/ItemCard";
 const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
-const addedItemsList = document.querySelector("#added-items");
-const unavailableItemsList = document.querySelector("#unavailable-items");
-const deliverySection = document.querySelector(".delivery");
 
 function renderItems(itemsArr, listSelector, templateSelector, isUnavailable) {
   const itemsList = document.querySelector(listSelector);
@@ -22,12 +19,15 @@ accordionButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const content = button.parentElement.nextElementSibling;
 
+    button.classList.toggle("cart-items__accordion-btn_active");
+
     if (content.style.display === "none") {
       content.style.display = "flex";
     } else {
       content.style.display = "none";
       if (button === accordionButtons[0]) {
         button.parentElement.style.marginBottom = "17px";
+        button.parentElement.parentElement.style.marginBottom = "7px";
       }
     }
   });
