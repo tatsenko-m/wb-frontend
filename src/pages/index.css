@@ -89,6 +89,7 @@
 
 @import url(../blocks/counter/counter.css);
 @import url(../blocks/counter/__btn/counter__btn.css);
+@import url(../blocks/counter/__btn/_inactive/counter__btn_inactive.css);
 @import url(../blocks/counter/__input/counter__input.css);
 
 @import url(../blocks/cart-section/cart-section.css);

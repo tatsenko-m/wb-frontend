@@ -1,4 +1,6 @@
 import { formatNumberWithThinSpace } from "../utils/utils";
+import Counter from "./Counter";
+
 class ItemCard {
   constructor(
     {
@@ -86,14 +88,12 @@ class ItemCard {
     }
   }
 
-  _setCosts() {
-    this._itemOldCostElement = this._element.querySelector(".item__price-old");
-    this._itemNewCostElement = this._element.querySelector(
-      ".item__price-new-number"
-    );
-    this._itemCounterInput.value = this._initialCounterValue;
-    const oldCost = this._oldPrice * this._itemCounterInput.value;
-    const newCost = this._newPrice * this._itemCounterInput.value;
+  _updateCosts() {
+    const intValue = parseInt(this._itemCounterInput.value);
+    if (isNaN(intValue)) return;
+
+    const oldCost = this._oldPrice * intValue;
+    const newCost = this._newPrice * intValue;
 
     if (oldCost >= 10000) {
       this._itemOldCostElement.innerHTML =
@@ -108,6 +108,21 @@ class ItemCard {
     } else {
       this._itemNewCostElement.textContent = newCost.toString();
     }
+  }
+
+  _setCosts() {
+    this._itemOldCostElement = this._element.querySelector(".item__price-old");
+    this._itemNewCostElement = this._element.querySelector(
+      ".item__price-new-number"
+    );
+
+    this._itemCounterInput.value = this._initialCounterValue;
+
+    this._itemCounterInput.addEventListener("input", () => {
+      this._updateCosts();
+    });
+
+    this._updateCosts();
   }
 
   _setBottomLabel() {
@@ -133,6 +148,7 @@ class ItemCard {
       ".item__company-name"
     );
     this._itemCounterInput = this._element.querySelector(".counter__input");
+    const counterContainer = this._element.querySelector(".counter");
 
     this._itemImageElement.src = this._image;
     this._itemImageElement.alt = this._name;
@@ -151,7 +167,7 @@ class ItemCard {
     if (this._isUnavailable) {
       this._element.querySelector(".checkbox-label").remove();
       this._element.querySelector(".item__vendor").remove();
-      this._element.querySelector(".counter").remove();
+      counterContainer.remove();
       this._element.querySelector(".item__count-warning")?.remove();
       this._element.querySelector(".item__price").remove();
 
@@ -162,6 +178,9 @@ class ItemCard {
         .classList.add("item__good-info_unavailable");
       this._countContainer.classList.add("item__count_unavailable");
       this._setBottomLabel();
+    }
+    if (!this._isUnavailable) {
+      this._counter = new Counter(counterContainer, this._maxQuantity, this);
     }
 
     return this._element;
