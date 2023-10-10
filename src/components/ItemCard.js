@@ -2,6 +2,7 @@ import { formatNumberWithThinSpace } from "../utils/utils";
 class ItemCard {
   constructor(
     {
+      id,
       image,
       name,
       features,
@@ -11,10 +12,12 @@ class ItemCard {
       maxQuantity,
       oldPrice,
       newPrice,
+      additionalPropertyValue,
     },
     templateSelector,
     isUnavailable
   ) {
+    this._id = id;
     this._image = image;
     this._name = name;
     this._features = features;
@@ -24,6 +27,7 @@ class ItemCard {
     this._maxQuantity = maxQuantity;
     this._oldPrice = oldPrice;
     this._newPrice = newPrice;
+    this._additionalPropertyValue = additionalPropertyValue;
     this._templateSelector = templateSelector;
     this._isUnavailable = isUnavailable;
     this._isLiked = false;
@@ -106,6 +110,18 @@ class ItemCard {
     }
   }
 
+  _setBottomLabel() {
+    if (this._additionalPropertyValue) {
+      this._imgContainer = this._element.querySelector(".item__good-img-block");
+      const bottomLabelElement = document.createElement("div");
+      bottomLabelElement.classList.add("item__bottom-label");
+      bottomLabelElement.textContent = this._additionalPropertyValue;
+      this._imgContainer.appendChild(bottomLabelElement);
+    } else {
+      return;
+    }
+  }
+
   createItemCard() {
     this._element = this._getTemplate();
 
@@ -128,6 +144,10 @@ class ItemCard {
     this._setCosts();
     this._setEventListeners();
 
+    if (this._id === 1) {
+      this._setBottomLabel();
+    }
+
     if (this._isUnavailable) {
       this._element.querySelector(".checkbox-label").remove();
       this._element.querySelector(".item__vendor").remove();
@@ -141,6 +161,7 @@ class ItemCard {
         .querySelector(".item__good-info")
         .classList.add("item__good-info_unavailable");
       this._countContainer.classList.add("item__count_unavailable");
+      this._setBottomLabel();
     }
 
     return this._element;
@@ -173,12 +194,12 @@ class ItemCard {
       this._toggleLike();
     });
 
-    this._element.addEventListener('mouseenter', () => {
-      this._actionsElement.style.visibility = 'visible';
+    this._element.addEventListener("mouseenter", () => {
+      this._actionsElement.style.visibility = "visible";
     });
 
-    this._element.addEventListener('mouseleave', () => {
-      this._actionsElement.style.visibility = 'hidden';
+    this._element.addEventListener("mouseleave", () => {
+      this._actionsElement.style.visibility = "hidden";
     });
   }
 }
