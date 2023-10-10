@@ -20,6 +20,7 @@ class Counter {
     );
 
     this._updateButtonStyles(parseInt(this._input.value));
+    this._input.addEventListener("input", this._handleInput.bind(this));
   }
 
   _handlePlusClick() {
@@ -56,6 +57,15 @@ class Counter {
     } else {
       this._plusButton.classList.remove("counter__btn_inactive");
     }
+  }
+
+  _handleInput() {
+    let currentValue = parseInt(this._input.value) || 0;
+    if (currentValue <= 0) {
+      this._input.value = "1";
+      currentValue = 1;
+    }
+    this._itemCardInstance._updateCosts();
   }
 }
 
