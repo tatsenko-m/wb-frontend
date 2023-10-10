@@ -62,9 +62,12 @@ class Counter {
 
   _handleInput() {
     let currentValue = parseInt(this._input.value) || 0;
-    if (currentValue <= 0) {
+    if (currentValue < 1) {
       this._input.value = "1";
       currentValue = 1;
+    } else if (currentValue > this._maxQuantity) {
+      this._input.value = this._maxQuantity.toString();
+      currentValue = this._maxQuantity;
     }
     this._itemCardInstance._updateCosts();
   }
