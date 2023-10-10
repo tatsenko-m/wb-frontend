@@ -27,7 +27,7 @@ function updateCartInfo() {
   counterInputs.forEach((input) => {
     const itemCard = input.closest(".item");
 
-    const checkbox = itemCard.querySelector(".checkbox-input");
+    const checkbox = itemCard.querySelector(".checkbox-label__invisible-item");
     if (checkbox && !checkbox.checked) {
       return;
     }
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const checkboxes = document.querySelectorAll(
-    ".cart-items__list .checkbox-input"
+    ".cart-items__list .checkbox-label__invisible-item"
   );
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
