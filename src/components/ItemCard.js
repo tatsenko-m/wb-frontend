@@ -17,7 +17,8 @@ class ItemCard {
       additionalPropertyValue,
     },
     templateSelector,
-    isUnavailable
+    isUnavailable,
+    updateCartFunc,
   ) {
     this._id = id;
     this._image = image;
@@ -32,6 +33,7 @@ class ItemCard {
     this._additionalPropertyValue = additionalPropertyValue;
     this._templateSelector = templateSelector;
     this._isUnavailable = isUnavailable;
+    this._updateCartFunc = updateCartFunc;
     this._isLiked = false;
   }
 
@@ -189,6 +191,9 @@ class ItemCard {
   _deleteItemCard() {
     this._element.remove();
     this._element = null;
+    if (this._updateCartFunc) {
+      this._updateCartFunc();
+    }
   }
 
   _toggleLike() {

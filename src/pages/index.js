@@ -6,10 +6,10 @@ const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
 
-function renderItems(itemsArr, listSelector, templateSelector, isUnavailable) {
+function renderItems(itemsArr, listSelector, templateSelector, isUnavailable, updateCartFunc) {
   const itemsList = document.querySelector(listSelector);
   itemsArr.forEach((item) => {
-    const itemCard = new ItemCard(item, templateSelector, isUnavailable);
+    const itemCard = new ItemCard(item, templateSelector, isUnavailable, updateCartFunc);
     const itemCardElement = itemCard.createItemCard();
     itemsList.append(itemCardElement);
   });
@@ -107,7 +107,7 @@ accordionButtons.forEach((button) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderItems(initialItems, "#added-items", "#item-template", false);
+  renderItems(initialItems, "#added-items", "#item-template", false, updateCartInfo);
   renderItems(initialItems, "#unavailable-items", "#item-template", true);
 
   const counterInputs = document.querySelectorAll(
