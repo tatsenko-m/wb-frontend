@@ -92,8 +92,8 @@ class ItemCard {
     const intValue = parseInt(this._itemCounterInput.value);
     if (isNaN(intValue)) return;
 
-    const oldCost = this._oldPrice * intValue;
-    const newCost = this._newPrice * intValue;
+    const oldCost = Math.round(this._oldPrice * intValue);
+    const newCost = Math.round(this._newPrice * intValue);
 
     if (oldCost >= 10000) {
       this._itemOldCostElement.innerHTML =
