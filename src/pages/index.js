@@ -10,6 +10,7 @@ const secondDeliveryField = document.querySelectorAll(
   ".delivery__field_include-items"
 )[1];
 const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
+const paymentCaption = document.querySelector(".payment__caption");
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -178,10 +179,14 @@ function addCheckboxEventListeners() {
     if (payImmediatelyCheckbox.checked) {
       payImmediatelyCheckbox.parentElement.nextElementSibling.style.display =
         "none";
+      paymentCaption.style.display = "none";
+      paymentCaption.parentElement.style.maxHeight = "112px";
       confirmOrderButton.textContent = `Оплатить ${formatPrice(totalNewCost)}`;
     } else {
       payImmediatelyCheckbox.parentElement.nextElementSibling.style.display =
         "block";
+      paymentCaption.style.display = "block";
+      paymentCaption.parentElement.style.maxHeight = "inherit";
       confirmOrderButton.textContent = "Заказать";
     }
   });
