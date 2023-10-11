@@ -6,7 +6,10 @@ const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
 const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
-const secondDeliveryField = document.querySelectorAll(".delivery__field_include-items")[1];
+const secondDeliveryField = document.querySelectorAll(
+  ".delivery__field_include-items"
+)[1];
+const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -141,6 +144,9 @@ function updateParentDisplay(container, childElementClass) {
 function addCheckboxEventListeners() {
   const checkboxes = document.querySelectorAll('input[name="check"]');
   const checkAllCheckbox = document.querySelector('input[name="checkAll"]');
+  const payImmediatelyCheckbox = document.querySelector(
+    'input[name="payImmediately"]'
+  );
 
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
@@ -149,7 +155,9 @@ function addCheckboxEventListeners() {
 
       const checkboxId = checkbox.id.match(/\d+/);
       if (checkboxId) {
-        const deliveryItems = document.querySelectorAll(`.delivery__item_id-${checkboxId}`);
+        const deliveryItems = document.querySelectorAll(
+          `.delivery__item_id-${checkboxId}`
+        );
 
         deliveryItems.forEach((item) => {
           item.classList.toggle("delivery__item_hidden");
@@ -165,6 +173,18 @@ function addCheckboxEventListeners() {
       updateCartInfo();
     });
   });
+
+  payImmediatelyCheckbox.addEventListener("change", () => {
+    if (payImmediatelyCheckbox.checked) {
+      payImmediatelyCheckbox.parentElement.nextElementSibling.style.display =
+        "none";
+      confirmOrderButton.textContent = `Оплатить ${formatPrice(totalNewCost)}`;
+    } else {
+      payImmediatelyCheckbox.parentElement.nextElementSibling.style.display =
+        "block";
+      confirmOrderButton.textContent = "Заказать";
+    }
+  });
 }
 
 function updateCheckboxes() {
@@ -177,17 +197,24 @@ function updateCheckboxes() {
 }
 
 function updateBadges(cardId, inputValue) {
-  const allListItems = document.querySelectorAll(`.item-image.delivery__item.delivery__item_id-${cardId}`);
+  const allListItems = document.querySelectorAll(
+    `.item-image.delivery__item.delivery__item_id-${cardId}`
+  );
   const listItem = allListItems[1] || allListItems[0];
 
   if (listItem) {
-    let badge = listItem.querySelector('.notification-badge_delivery');
-    let modifiedBadge = listItem.querySelector('.notification-badge_delivery-modified');
+    let badge = listItem.querySelector(".notification-badge_delivery");
+    let modifiedBadge = listItem.querySelector(
+      ".notification-badge_delivery-modified"
+    );
 
     if (inputValue > 1) {
       if (!badge) {
-        const newBadge = document.createElement('div');
-        newBadge.classList.add('notification-badge', 'notification-badge_delivery');
+        const newBadge = document.createElement("div");
+        newBadge.classList.add(
+          "notification-badge",
+          "notification-badge_delivery"
+        );
         listItem.insertBefore(newBadge, listItem.firstChild);
         badge = newBadge;
       }
@@ -196,8 +223,12 @@ function updateBadges(cardId, inputValue) {
 
       if (inputValue > 184) {
         if (!modifiedBadge) {
-          const newModifiedBadge = document.createElement('div');
-          newModifiedBadge.classList.add('notification-badge', 'notification-badge_delivery', 'notification-badge_delivery-modified');
+          const newModifiedBadge = document.createElement("div");
+          newModifiedBadge.classList.add(
+            "notification-badge",
+            "notification-badge_delivery",
+            "notification-badge_delivery-modified"
+          );
           listItem.insertBefore(newModifiedBadge, listItem.firstChild);
           modifiedBadge = newModifiedBadge;
         }
@@ -247,9 +278,8 @@ async function init() {
           button.parentElement.style.marginBottom = "0";
           button.parentElement.parentElement.style.marginBottom = "0";
           labelCheckAll.style.display = "flex";
-          document.querySelector('.cart-items__list-heading').remove();
+          document.querySelector(".cart-items__list-heading").remove();
         }
-
       } else {
         content.style.display = "none";
         if (button === accordionButtons[0]) {
@@ -258,7 +288,9 @@ async function init() {
           labelCheckAll.style.display = "none";
           const pElement = document.createElement("p");
           pElement.className = "cart-items__list-heading";
-          pElement.textContent = `${formatQuantity(totalQuantity)} · ${formatPrice(totalNewCost)}`;
+          pElement.textContent = `${formatQuantity(
+            totalQuantity
+          )} · ${formatPrice(totalNewCost)}`;
           button.parentElement.insertBefore(pElement, button);
         }
       }
