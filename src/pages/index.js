@@ -6,10 +6,23 @@ const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
 
-function renderItems(itemsArr, listSelector, templateSelector, isUnavailable, updateCartFunc) {
+function renderItems(
+  itemsArr,
+  listSelector,
+  templateSelector,
+  isUnavailable,
+  updateCartFunc,
+  updateCheckboxesFunc
+) {
   const itemsList = document.querySelector(listSelector);
   itemsArr.forEach((item) => {
-    const itemCard = new ItemCard(item, templateSelector, isUnavailable, updateCartFunc);
+    const itemCard = new ItemCard(
+      item,
+      templateSelector,
+      isUnavailable,
+      updateCartFunc,
+      updateCheckboxesFunc
+    );
     const itemCardElement = itemCard.createItemCard();
     itemsList.append(itemCardElement);
   });
@@ -66,12 +79,12 @@ function updateCartInfo() {
   totalDiscountElement.textContent = formatPrice(totalDiscount);
 }
 
-
 function formatQuantity(quantity) {
   if (quantity % 10 === 1 && quantity % 100 !== 11) {
     return `${quantity} товар`;
   } else if (
-    (quantity % 10 >= 2 && quantity % 10 <= 4) &&
+    quantity % 10 >= 2 &&
+    quantity % 10 <= 4 &&
     !(quantity % 100 >= 12 && quantity % 100 <= 14)
   ) {
     return `${quantity} товара`;
@@ -88,45 +101,88 @@ function formatPrice(price) {
   return `${formattedPrice} сом`;
 }
 
-accordionButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const content = button.parentElement.nextElementSibling;
-
-    button.classList.toggle("cart-items__accordion-btn_active");
-
-    if (content.style.display === "none") {
-      content.style.display = "flex";
-    } else {
-      content.style.display = "none";
-      if (button === accordionButtons[0]) {
-        button.parentElement.style.marginBottom = "17px";
-        button.parentElement.parentElement.style.marginBottom = "7px";
-      }
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderItems(initialItems, "#added-items", "#item-template", false, updateCartInfo);
-  renderItems(initialItems, "#unavailable-items", "#item-template", true);
-
+function addCounterInputEventListeners() {
   const counterInputs = document.querySelectorAll(
     ".cart-items__list .counter__input"
   );
   counterInputs.forEach((input) => {
     input.addEventListener("input", () => {
       updateCartInfo();
+      updateCheckboxes();
     });
   });
+}
 
-  const checkboxes = document.querySelectorAll(
-    ".cart-items__list .checkbox-label__invisible-item"
-  );
+function addCheckboxEventListeners() {
+  const checkboxes = document.querySelectorAll('input[name="check"]');
+  const checkAllCheckbox = document.querySelector('input[name="checkAll"]');
+
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
       updateCartInfo();
+      updateCheckboxes();
+    });
+  });
+
+  checkAllCheckbox.addEventListener("change", () => {
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = checkAllCheckbox.checked;
+      updateCartInfo();
+    });
+  });
+}
+
+function updateCheckboxes() {
+  const checkboxes = document.querySelectorAll('input[name="check"]');
+  const checkAllCheckbox = document.querySelector('input[name="checkAll"]');
+  const atLeastOneUnchecked = [...checkboxes].some(
+    (checkbox) => !checkbox.checked
+  );
+  checkAllCheckbox.checked = !atLeastOneUnchecked;
+}
+
+async function init() {
+  await new Promise((resolve) => {
+    if (document.readyState === "complete") {
+      resolve();
+    } else {
+      window.addEventListener("load", resolve);
+    }
+  });
+
+  renderItems(
+    initialItems,
+    "#added-items",
+    "#item-template",
+    false,
+    updateCartInfo,
+    updateCheckboxes
+  );
+  renderItems(initialItems, "#unavailable-items", "#item-template", true);
+
+  addCounterInputEventListeners();
+  addCheckboxEventListeners();
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.parentElement.nextElementSibling;
+
+      button.classList.toggle("cart-items__accordion-btn_active");
+
+      if (content.style.display === "none") {
+        content.style.display = "flex";
+      } else {
+        content.style.display = "none";
+        if (button === accordionButtons[0]) {
+          button.parentElement.style.marginBottom = "17px";
+          button.parentElement.parentElement.style.marginBottom = "7px";
+        }
+      }
     });
   });
 
   updateCartInfo();
-});
+  updateCheckboxes();
+}
+
+init();

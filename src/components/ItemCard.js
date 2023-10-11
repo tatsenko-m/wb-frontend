@@ -19,6 +19,7 @@ class ItemCard {
     templateSelector,
     isUnavailable,
     updateCartFunc,
+    updateCheckboxesFunc
   ) {
     this._id = id;
     this._image = image;
@@ -34,6 +35,7 @@ class ItemCard {
     this._templateSelector = templateSelector;
     this._isUnavailable = isUnavailable;
     this._updateCartFunc = updateCartFunc;
+    this._updateCheckboxesFunc = updateCheckboxesFunc;
     this._isLiked = false;
   }
 
@@ -193,6 +195,7 @@ class ItemCard {
     this._element = null;
     if (this._updateCartFunc) {
       this._updateCartFunc();
+      this._updateCheckboxesFunc();
     }
   }
 
