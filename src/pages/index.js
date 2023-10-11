@@ -5,6 +5,11 @@ import ItemCard from "../components/ItemCard";
 const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
+const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
+
+let totalQuantity = 0;
+let totalNewCost = 0;
+let totalOldCost = 0;
 
 function renderItems(
   itemsArr,
@@ -33,9 +38,9 @@ function updateCartInfo() {
     ".cart-items__list .counter__input"
   );
 
-  let totalQuantity = 0;
-  let totalNewCost = 0;
-  let totalOldCost = 0;
+  totalQuantity = 0;
+  totalNewCost = 0;
+  totalOldCost = 0;
 
   counterInputs.forEach((input) => {
     const itemCard = input.closest(".item");
@@ -171,11 +176,23 @@ async function init() {
 
       if (content.style.display === "none") {
         content.style.display = "flex";
+        if (button === accordionButtons[0]) {
+          button.parentElement.style.marginBottom = "0";
+          button.parentElement.parentElement.style.marginBottom = "0";
+          labelCheckAll.style.display = "flex";
+          document.querySelector('.cart-items__list-heading').remove();
+        }
+
       } else {
         content.style.display = "none";
         if (button === accordionButtons[0]) {
           button.parentElement.style.marginBottom = "17px";
           button.parentElement.parentElement.style.marginBottom = "7px";
+          labelCheckAll.style.display = "none";
+          const pElement = document.createElement("p");
+          pElement.className = "cart-items__list-heading";
+          pElement.textContent = `${formatQuantity(totalQuantity)} · ${formatPrice(totalNewCost)}`;
+          button.parentElement.insertBefore(pElement, button);
         }
       }
     });

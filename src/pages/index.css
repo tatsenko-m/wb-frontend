@@ -42,7 +42,7 @@
 @import url(../blocks/cart-items/__accordion-btn/cart-items__accordion-btn.css);
 @import url(../blocks/cart-items/__accordion-btn/_active/cart-items__accordion-btn_active.css);
 @import url(../blocks/cart-items/__list/cart-items__list.css);
-@import url(../blocks/cart-items/__unavailable-heading/cart-items__unavailable-heading.css);
+@import url(../blocks/cart-items/__list-heading/cart-items__list-heading.css);
 
 @import url(../blocks/item-image/item-image.css);
 @import url(../blocks/item-image/__image/item-image__image.css);
