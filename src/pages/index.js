@@ -114,9 +114,13 @@ function addCounterInputEventListeners() {
     input.addEventListener("input", () => {
       updateCartInfo();
       updateCheckboxes();
+      const cardId = input.getAttribute("id");
+      const inputValue = parseInt(input.value) || 0;
+      updateBadges(cardId, inputValue);
     });
   });
 }
+
 
 function addCheckboxEventListeners() {
   const checkboxes = document.querySelectorAll('input[name="check"]');
@@ -144,6 +148,41 @@ function updateCheckboxes() {
     (checkbox) => !checkbox.checked
   );
   checkAllCheckbox.checked = !atLeastOneUnchecked;
+}
+
+function updateBadges(cardId, inputValue) {
+  const allListItems = document.querySelectorAll(`.item-image.delivery__item.delivery__item_id-${cardId}`);
+  const listItem = allListItems[1] || allListItems[0];
+
+  if (listItem) {
+    let badge = listItem.querySelector('.notification-badge_delivery');
+    let modifiedBadge = listItem.querySelector('.notification-badge_delivery-modified');
+
+    if (inputValue > 0) {
+      if (!badge) {
+        const newBadge = document.createElement('div');
+        newBadge.classList.add('notification-badge', 'notification-badge_delivery');
+        listItem.insertBefore(newBadge, listItem.firstChild);
+        badge = newBadge;
+      }
+
+      badge.textContent = inputValue;
+
+      if (inputValue > 184) {
+        if (!modifiedBadge) {
+          const newModifiedBadge = document.createElement('div');
+          newModifiedBadge.classList.add('notification-badge', 'notification-badge_delivery', 'notification-badge_delivery-modified');
+          listItem.insertBefore(newModifiedBadge, listItem.firstChild);
+          modifiedBadge = newModifiedBadge;
+        }
+        modifiedBadge.textContent = inputValue - 184;
+      } else if (modifiedBadge) {
+        modifiedBadge.remove();
+      }
+    } else if (badge) {
+      badge.remove();
+    }
+  }
 }
 
 async function init() {

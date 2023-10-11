@@ -152,6 +152,7 @@ class ItemCard {
       ".item__company-name"
     );
     this._itemCounterInput = this._element.querySelector(".counter__input");
+    this._itemCounterInput.id = this._id;
     const counterContainer = this._element.querySelector(".counter");
 
     this._itemImageElement.src = this._image;
