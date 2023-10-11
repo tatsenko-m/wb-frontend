@@ -19,7 +19,8 @@ class ItemCard {
     templateSelector,
     isUnavailable,
     updateCartFunc,
-    updateCheckboxesFunc
+    updateCheckboxesFunc,
+    updateBadgesFunc
   ) {
     this._id = id;
     this._image = image;
@@ -36,6 +37,7 @@ class ItemCard {
     this._isUnavailable = isUnavailable;
     this._updateCartFunc = updateCartFunc;
     this._updateCheckboxesFunc = updateCheckboxesFunc;
+    this._updateBadgesFunc = updateBadgesFunc;
     this._isLiked = false;
   }
 
@@ -185,7 +187,7 @@ class ItemCard {
       this._setBottomLabel();
     }
     if (!this._isUnavailable) {
-      this._counter = new Counter(counterContainer, this._maxQuantity, this, this._updateCartFunc);
+      this._counter = new Counter(counterContainer, this._maxQuantity, this, this._updateCartFunc, this._id, this._updateBadgesFunc);
     }
 
     return this._element;

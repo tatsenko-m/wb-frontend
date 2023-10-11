@@ -17,7 +17,8 @@ function renderItems(
   templateSelector,
   isUnavailable,
   updateCartFunc,
-  updateCheckboxesFunc
+  updateCheckboxesFunc,
+  updateBadgesFunc
 ) {
   const itemsList = document.querySelector(listSelector);
   itemsArr.forEach((item) => {
@@ -26,7 +27,8 @@ function renderItems(
       templateSelector,
       isUnavailable,
       updateCartFunc,
-      updateCheckboxesFunc
+      updateCheckboxesFunc,
+      updateBadgesFunc
     );
     const itemCardElement = itemCard.createItemCard();
     itemsList.append(itemCardElement);
@@ -200,7 +202,8 @@ async function init() {
     "#item-template",
     false,
     updateCartInfo,
-    updateCheckboxes
+    updateCheckboxes,
+    updateBadges
   );
   renderItems(initialItems, "#unavailable-items", "#item-template", true);
 
