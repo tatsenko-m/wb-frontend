@@ -105,6 +105,7 @@
 @import url(../blocks/delivery/__cost/delivery__cost.css);
 @import url(../blocks/delivery/__items-list/delivery__items-list.css);
 @import url(../blocks/delivery/__item/delivery__item.css);
+@import url(../blocks/delivery/__item/_hidden/delivery__item_hidden.css);
 @import url(../blocks/delivery/__refusal/delivery__refusal.css);
 
 @import url(../blocks/address-info/address-info.css);

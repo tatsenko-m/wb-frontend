@@ -163,6 +163,7 @@ class ItemCard {
     this._fillFeatures();
     this._itemWarehouseElement.textContent = this._warehouse;
     this._itemCompanyElement.textContent = this._companyInfo?.shortName;
+    this._element.querySelector(".checkbox-label__invisible-item").id = `check${this._id}`;
     this._setQuantityWarning();
     this._setCosts();
     this._setEventListeners();

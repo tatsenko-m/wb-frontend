@@ -124,6 +124,19 @@ function addCounterInputEventListeners() {
   });
 }
 
+function updateParentDisplay(container, childElementClass) {
+  const childElements = container.querySelectorAll(childElementClass);
+  let hasVisibleElement = false;
+
+  childElements.forEach((element) => {
+    if (window.getComputedStyle(element).display !== "none") {
+      hasVisibleElement = true;
+      return;
+    }
+  });
+
+  container.parentElement.style.display = hasVisibleElement ? "flex" : "none";
+}
 
 function addCheckboxEventListeners() {
   const checkboxes = document.querySelectorAll('input[name="check"]');
@@ -133,6 +146,16 @@ function addCheckboxEventListeners() {
     checkbox.addEventListener("change", () => {
       updateCartInfo();
       updateCheckboxes();
+
+      const checkboxId = checkbox.id.match(/\d+/);
+      if (checkboxId) {
+        const deliveryItems = document.querySelectorAll(`.delivery__item_id-${checkboxId}`);
+
+        deliveryItems.forEach((item) => {
+          item.classList.toggle("delivery__item_hidden");
+          updateParentDisplay(item.parentElement, ".delivery__item");
+        });
+      }
     });
   });
 
