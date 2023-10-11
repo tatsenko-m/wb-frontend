@@ -6,6 +6,7 @@ const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
 const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
+const secondDeliveryField = document.querySelectorAll(".delivery__field_include-items")[1];
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -160,7 +161,7 @@ function updateBadges(cardId, inputValue) {
     let badge = listItem.querySelector('.notification-badge_delivery');
     let modifiedBadge = listItem.querySelector('.notification-badge_delivery-modified');
 
-    if (inputValue > 0) {
+    if (inputValue > 1) {
       if (!badge) {
         const newBadge = document.createElement('div');
         newBadge.classList.add('notification-badge', 'notification-badge_delivery');
@@ -180,6 +181,7 @@ function updateBadges(cardId, inputValue) {
         modifiedBadge.textContent = inputValue - 184;
       } else if (modifiedBadge) {
         modifiedBadge.remove();
+        secondDeliveryField.style.display = "none";
       }
     } else if (badge) {
       badge.remove();

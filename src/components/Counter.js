@@ -26,6 +26,9 @@ class Counter {
 
     this._updateButtonStyles(parseInt(this._input.value));
     this._input.addEventListener("input", this._handleInput.bind(this));
+    this._input.addEventListener("keydown", function (e) {
+      e.preventDefault();
+    });
   }
 
   _handlePlusClick() {
