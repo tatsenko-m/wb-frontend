@@ -5,6 +5,9 @@ import ItemCard from "../components/ItemCard";
 const accordionButtons = document.querySelectorAll(
   ".cart-items__accordion-btn"
 );
+const refusalHoverableElements = document.querySelectorAll(
+  ".refusal__text-hoverable"
+);
 const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
 const secondDeliveryField = document.querySelectorAll(
   ".delivery__field_include-items"
@@ -299,6 +302,16 @@ async function init() {
           button.parentElement.insertBefore(pElement, button);
         }
       }
+    });
+  });
+
+  refusalHoverableElements.forEach((el) => {
+    el.addEventListener("mouseover", () => {
+      el.parentElement.nextElementSibling.style.display = "flex";
+    });
+
+    el.addEventListener("mouseout", () => {
+      el.parentElement.nextElementSibling.style.display = "none";
     });
   });
 

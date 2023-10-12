@@ -228,6 +228,7 @@ class ItemCard {
     this._deleteButtonElement =
       this._element.querySelector(".item__delete-btn");
     this._actionsElement = this._element.querySelector(".item__actions");
+    this._companyDetailsIcon = this._element.querySelector(".item__company-details-icon");
 
     this._deleteButtonElement.addEventListener("click", () => {
       this._deleteItemCard();
@@ -243,6 +244,22 @@ class ItemCard {
 
     this._element.addEventListener("mouseleave", () => {
       this._actionsElement.style.visibility = "hidden";
+    });
+
+    this._companyDetailsIcon.addEventListener('mouseover', () => {
+      this._companyDetailsIcon.nextElementSibling.style.display = 'flex';
+    });
+
+    this._companyDetailsIcon.addEventListener('mouseout', () => {
+      this._companyDetailsIcon.nextElementSibling.style.display = 'none';
+    });
+
+    this._itemOldCostElement.addEventListener('mouseover', () => {
+      this._itemOldCostElement.nextElementSibling.style.display = 'flex';
+    });
+
+    this._itemOldCostElement.addEventListener('mouseout', () => {
+      this._itemOldCostElement.nextElementSibling.style.display = 'none';
     });
   }
 }

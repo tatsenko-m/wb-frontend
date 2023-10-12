@@ -1,5 +1,5 @@
 .tooltip {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 8px;
   width: 100%;
