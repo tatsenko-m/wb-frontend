@@ -1,3 +1,9 @@
 .popup__choose-button {
   width: fit-content;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__choose-button {
+    width: 100%;
+  }
+}

@@ -21,3 +21,10 @@
   box-sizing: border-box;
   cursor: pointer;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__menu-button {
+    padding: 9px 0 11px;
+    max-width: 140px;
+  }
+}

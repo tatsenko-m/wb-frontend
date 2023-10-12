@@ -8,3 +8,9 @@
   margin: 0;
   padding: 0;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__address-list {
+    gap: 24px;
+  }
+}

@@ -1,3 +1,4 @@
 .popup__delete-btn {
   background-image: url(../../../images/delete-icon-gray.svg);
+  flex: none;
 }

@@ -5,3 +5,9 @@
   align-items: center;
   margin-bottom: 26px;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__menu {
+    padding-left: 2px;
+  }
+}

@@ -5,3 +5,10 @@
   border-radius: 0 0 16px 16px;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__footer {
+    border-radius: 0;
+    padding: 16px;
+  }
+}
