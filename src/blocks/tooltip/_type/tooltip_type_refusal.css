@@ -1,0 +1,7 @@
+.tooltip_type_refusal {
+  width: fit-content;
+  min-width: 288px;
+  max-height: 56px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+}
