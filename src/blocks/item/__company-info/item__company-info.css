@@ -1,10 +1,11 @@
 .item__company-info {
   display: flex;
   align-items: center;
-  width: max-content;
+  width: 100%;
   gap: 6px;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,0 +1,26 @@
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 288px;
+  min-height: 56px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 11px 16px 13px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  bottom: -535%;
+  left: 1%;
+}

@@ -87,6 +87,13 @@
 @import url(../blocks/item/__price-old/item__price-old.css);
 @import url(../blocks/item/__bottom-label/item__bottom-label.css);
 
+@import url(../blocks/tooltip/tooltip.css);
+@import url(../blocks/tooltip/_type/tooltip_type_discount.css);
+@import url(../blocks/tooltip/__text/tooltip__text.css);
+@import url(../blocks/tooltip/__company-name/tooltip__company-name.css);
+@import url(../blocks/tooltip/__field/tooltip__field.css);
+@import url(../blocks/tooltip/__field-name/tooltip__field-name.css);
+
 @import url(../blocks/counter/counter.css);
 @import url(../blocks/counter/__btn/counter__btn.css);
 @import url(../blocks/counter/__btn/_inactive/counter__btn_inactive.css);
