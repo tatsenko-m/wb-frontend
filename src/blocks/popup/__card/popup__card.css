@@ -1,0 +1,6 @@
+.popup__card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 4px;
+}

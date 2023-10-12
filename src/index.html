@@ -409,7 +409,7 @@
         </li>
       </ul>
     </nav>
-    <div class="popup">
+    <!-- <div class="popup">
       <div class="popup__container">
         <div class="popup__header">
           <h3 class="popup__heading">Способ доставки</h3>
@@ -485,41 +485,68 @@
           </div>
         </form>
       </div>
-    </div>
-    <!-- <div class="popup">
+    </div> -->
+    <div class="popup">
       <div class="popup__container">
-        <div class="popup__header">
-          <h3 class="popup__heading">Способ доставки</h3>
+        <div class="popup__header popup__header_type_payment">
+          <h3 class="popup__heading">Способ оплаты</h3>
           <button class="popup__close-button" type="button"></button>
         </div>
         <form class="popup__form">
-          <div class="popup__content">
-            <div class="popup__menu">
-              <button  class="popup__menu-button popup__menu-button_active" type="button">В пункт выдачи</button>
-              <button  class="popup__menu-button" type="button">Курьером</button>
-            </div>
-            <h4 class="popup__subheading">Мои адреса</h4>
+          <div class="popup__content popup__content_type_payment">
             <ul class="popup__address-list">
               <li class="popup__address">
                 <label class="popup__address-label">
-                  <input class="popup__radio" type="radio" name="address" checked>
-                  <p class="address-info__address popup__address-text">Бишкек, улица Табышалиева, 57</p>
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                    checked
+                  />
+                  <div class="popup__card">
+                    <div class="card-logo card-logo_type_mir"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
                 </label>
-                <button class="delete-btn popup__delete-btn" type="button"></button>
               </li>
               <li class="popup__address">
                 <label class="popup__address-label">
-                  <input class="popup__radio" type="radio" name="address">
-                  <p class="address-info__address popup__address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card">
+                    <div class="card-logo card-logo_type_mir"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
                 </label>
-                <button class="delete-btn popup__delete-btn" type="button"></button>
               </li>
               <li class="popup__address">
                 <label class="popup__address-label">
-                  <input class="popup__radio" type="radio" name="address">
-                  <p class="address-info__address popup__address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card">
+                    <div class="card-logo card-logo_type_mir"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
                 </label>
-                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card">
+                    <div class="card-logo card-logo_type_mir"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
+                </label>
               </li>
             </ul>
           </div>
@@ -530,7 +557,7 @@
           </div>
         </form>
       </div>
-    </div> -->
+    </div>
     <template id="item-template">
       <li class="item">
         <div class="item__good-img-block">
