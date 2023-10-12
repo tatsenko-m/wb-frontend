@@ -1,5 +1,5 @@
 import "./index.css";
-import { initialItems } from "../utils/constants";
+import { initialItems, courierAddressHTML, pickupAddressHTML } from "../utils/constants";
 import ItemCard from "../components/ItemCard";
 
 const accordionButtons = document.querySelectorAll(
@@ -14,6 +14,9 @@ const secondDeliveryField = document.querySelectorAll(
 )[1];
 const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
 const paymentCaption = document.querySelector(".payment__caption");
+const courierButton = document.querySelector('.popup__menu-button:not(.popup__menu-button_active)');
+const pickupButton = document.querySelector('.popup__menu-button_active');
+const addressList = document.querySelector('.popup__address-list');
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -313,6 +316,18 @@ async function init() {
     el.addEventListener("mouseout", () => {
       el.parentElement.nextElementSibling.style.display = "none";
     });
+  });
+
+  courierButton.addEventListener('click', () => {
+    courierButton.classList.add('popup__menu-button_active');
+    pickupButton.classList.remove('popup__menu-button_active');
+    addressList.innerHTML = courierAddressHTML;
+  });
+
+  pickupButton.addEventListener('click', () => {
+    pickupButton.classList.add('popup__menu-button_active');
+    courierButton.classList.remove('popup__menu-button_active');
+    addressList.innerHTML = pickupAddressHTML;
   });
 
   updateCartInfo();

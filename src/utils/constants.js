@@ -62,3 +62,79 @@ export const initialItems = [
     additionalPropertyValue: "56/54/52...",
   },
 ];
+
+export const courierAddressHTML = `<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address" checked>
+  <p class="address-info__address popup__address-text">Бишкек, улица Табышалиева, 57</p>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>
+<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address">
+  <p class="address-info__address popup__address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>
+<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address">
+  <p class="address-info__address popup__address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>`;
+
+export const pickupAddressHTML = `<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address" checked>
+  <div class="address-info">
+    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+    <div class="address-info__pickup-point-info">
+      <div class="address-info__pickup-point-rating">
+        <div class="address-info__pickup-point-star"></div>
+      </div>
+      <p class="popup__pickup-point-caption">
+        Пункт выдачи
+      </p>
+    </div>
+  </div>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>
+<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address">
+  <div class="address-info">
+    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+    <div class="address-info__pickup-point-info">
+      <div class="address-info__pickup-point-rating">
+        <div class="address-info__pickup-point-star"></div>
+        <p class="address-info__pickup-point-grade">4.99</p>
+      </div>
+      <p class="popup__pickup-point-caption">
+        Пункт выдачи
+      </p>
+    </div>
+  </div>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>
+<li class="popup__address">
+<label class="popup__address-label">
+  <input class="popup__radio" type="radio" name="address">
+  <div class="address-info">
+    <p class="address-info__address popup__address-text">г. Бишкек, улица Табышалиева, д. 57</p>
+    <div class="address-info__pickup-point-info">
+      <div class="address-info__pickup-point-rating">
+        <div class="address-info__pickup-point-star"></div>
+        <p class="address-info__pickup-point-grade">4.99</p>
+      </div>
+      <p  class="popup__pickup-point-caption">
+        Пункт выдачи
+      </p>
+    </div>
+  </div>
+</label>
+<button class="delete-btn popup__delete-btn" type="button"></button>
+</li>`;
