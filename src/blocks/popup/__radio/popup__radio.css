@@ -1,0 +1,19 @@
+.popup__radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  flex: none;
+  margin: 2px;
+}
+
+.popup__radio:checked {
+  border-width: 5px;
+  border-color: #CB10AB;
+}

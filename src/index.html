@@ -74,9 +74,7 @@
             </div>
             <ul class="cart-items__list" id="added-items"></ul>
             <div class="cart-items__accordion">
-              <p class="cart-items__list-heading">
-                Отсутствуют · 3 товара
-              </p>
+              <p class="cart-items__list-heading">Отсутствуют · 3 товара</p>
               <button class="cart-items__accordion-btn" type="button"></button>
             </div>
             <ul class="cart-items__list" id="unavailable-items"></ul>
@@ -169,7 +167,10 @@
                 >
               </p>
               <div class="tooltip tooltip_type_refusal tooltip_type_delivery">
-                <p class="tooltip__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                <p class="tooltip__text">
+                  Если товары вам не подойдут, мы вернем их обратно на склад —
+                  это бесплатно
+                </p>
               </div>
             </div>
           </section>
@@ -266,12 +267,18 @@
               </div>
               <div class="total__calculations-fields">
                 <div class="total__calculations-field">
-                  <p class="total__calculations-text" id="total-quantity">203 товара</p>
-                  <p class="total__calculations-text" id="total-old-cost">2 302 048 сом</p>
+                  <p class="total__calculations-text" id="total-quantity">
+                    203 товара
+                  </p>
+                  <p class="total__calculations-text" id="total-old-cost">
+                    2 302 048 сом
+                  </p>
                 </div>
                 <div class="total__calculations-field">
                   <p class="total__calculations-text">Скидка</p>
-                  <p class="total__calculations-text" id="total-discount">−200 985 сом</p>
+                  <p class="total__calculations-text" id="total-discount">
+                    −200 985 сом
+                  </p>
                 </div>
                 <div class="total__calculations-field">
                   <p class="total__calculations-text">Доставка</p>
@@ -301,7 +308,10 @@
                     >
                   </p>
                   <div class="tooltip tooltip_type_refusal tooltip_type_total">
-                    <p class="tooltip__text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                    <p class="tooltip__text">
+                      Если товары вам не подойдут, мы вернем их обратно на склад
+                      — это бесплатно
+                    </p>
                   </div>
                 </div>
               </div>
@@ -338,17 +348,23 @@
             </div>
           </div>
           <div class="total__confirm-order">
-            <button class="submit-button total__confirm-order-btn" type="submit">
+            <button
+              class="submit-button total__confirm-order-btn"
+              type="submit"
+            >
               Заказать
             </button>
             <div class="total__offer-accept">
               <div class="total__offer-accept-check"></div>
               <p class="total__ordinary-text">
-                Соглашаюсь&nbsp;<a class="total__offer-accept-link total__offer-accept-link_terms-of-use" id="terms-of-use" href="#"
-                  >с&thinsp;правилами&thinsp;пользования&thinsp;торговой площадкой</a
-                > и&nbsp;<a class="total__offer-accept-link" href="#"
-                  >возврата</a
+                Соглашаюсь&nbsp;<a
+                  class="total__offer-accept-link total__offer-accept-link_terms-of-use"
+                  id="terms-of-use"
+                  href="#"
+                  >с&thinsp;правилами&thinsp;пользования&thinsp;торговой
+                  площадкой</a
                 >
+                и&nbsp;<a class="total__offer-accept-link" href="#">возврата</a>
               </p>
             </div>
           </div>
@@ -399,10 +415,75 @@
           <h3 class="popup__heading">Способ доставки</h3>
           <button class="popup__close-button" type="button"></button>
         </div>
-        <div class="popup__content"></div>
-        <div class="popup__footer">
-          <button class="submit-button popup__choose-button" type="submit">Выбрать</button>
-        </div>
+        <form class="popup__form">
+          <div class="popup__content">
+            <div class="popup__menu">
+              <button  class="popup__menu-button popup__menu-button_active" type="button">В пункт выдачи</button>
+              <button  class="popup__menu-button" type="button">Курьером</button>
+            </div>
+            <h4 class="popup__subheading">Мои адреса</h4>
+            <ul class="popup__address-list">
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                      </div>
+                      <p class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                        <p class="address-info__pickup-point-grade">4.99</p>
+                      </div>
+                      <p class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, улица Табышалиева, д. 57</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                        <p class="address-info__pickup-point-grade">4.99</p>
+                      </div>
+                      <p  class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+            </ul>
+          </div>
+          <div class="popup__footer">
+            <button class="submit-button popup__choose-button" type="submit">
+              Выбрать
+            </button>
+          </div>
+        </form>
       </div>
     </div>
     <template id="item-template">
@@ -449,7 +530,7 @@
           </div>
           <div class="item__actions">
             <button class="item__like-btn" type="button"></button>
-            <button class="item__delete-btn" type="button"></button>
+            <button class="delete-btn item__delete-btn" type="button"></button>
           </div>
         </div>
         <div class="item__price">
@@ -464,7 +545,9 @@
               <p class="tooltip__text">−300 сом</p>
             </div>
             <div class="tooltip__field">
-              <p class="tooltip__text tooltip__field-name">Скидка покупателя 10%</p>
+              <p class="tooltip__text tooltip__field-name">
+                Скидка покупателя 10%
+              </p>
               <p class="tooltip__text">−30 сом</p>
             </div>
           </div>

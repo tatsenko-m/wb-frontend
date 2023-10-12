@@ -1,0 +1,10 @@
+.popup__address-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
