@@ -1,0 +1,27 @@
+.submit-button {
+  width: 100%;
+  min-width: 164px;
+  border: 0;
+  background: #cb11ab;
+  color: #fff;
+  text-align: center;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  margin: 0;
+  padding: 7.5px 0 12.5px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.submit-button:hover {
+  opacity: 0.7;
+}

@@ -148,6 +148,8 @@
 @import url(../blocks/recipient/__error/recipient__error.css);
 @import url(../blocks/recipient/__caption/recipient__caption.css);
 
+@import url(../blocks/submit-button/submit-button.css);
+
 @import url(../blocks/total/total.css);
 @import url(../blocks/total/__order-details/total__order-details.css);
 @import url(../blocks/total/__calculations/total__calculations.css);
@@ -184,3 +186,11 @@
 @import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_cart.css);
 @import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_favorites.css);
 @import url(../blocks/navbar-mobile/__link/_type/navbar-mobile__link_type_profile.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__header/popup__header.css);
+@import url(../blocks/popup/__heading/popup__heading.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__footer/popup__footer.css);
+@import url(../blocks/popup/__choose-button/popup__choose-button.css);
