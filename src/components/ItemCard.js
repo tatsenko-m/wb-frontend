@@ -153,6 +153,15 @@ class ItemCard {
     this._itemCompanyElement = this._element.querySelector(
       ".item__company-name"
     );
+    this._companyTooltipNameElement = this._element.querySelector(
+      ".tooltip__company-name"
+    );
+    this._companyTooltipOgrnElement = this._element.querySelector(
+      ".tooltip__ogrn"
+    );
+    this._companyTooltipAddressElement = this._element.querySelector(
+      ".tooltip__address"
+    );
     this._itemCounterInput = this._element.querySelector(".counter__input");
     this._itemCounterInput.id = this._id;
     const counterContainer = this._element.querySelector(".counter");
@@ -163,6 +172,9 @@ class ItemCard {
     this._fillFeatures();
     this._itemWarehouseElement.textContent = this._warehouse;
     this._itemCompanyElement.textContent = this._companyInfo?.shortName;
+    this._companyTooltipNameElement.textContent = this._companyInfo?.fullName;
+    this._companyTooltipOgrnElement.textContent = `ОГРН: ${this._companyInfo?.ogrn}`;
+    this._companyTooltipAddressElement.textContent = this._companyInfo?.address;
     this._element.querySelector(".checkbox-label__invisible-item").id = `check${this._id}`;
     this._setQuantityWarning();
     this._setCosts();

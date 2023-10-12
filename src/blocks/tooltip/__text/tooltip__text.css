@@ -1,4 +1,9 @@
 .tooltip__text {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines, 2);
+  text-overflow: ellipsis;
 }

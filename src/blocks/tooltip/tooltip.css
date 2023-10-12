@@ -24,3 +24,9 @@
   bottom: -535%;
   left: 1%;
 }
+
+@media screen and (max-width: 767px) {
+  .tooltip {
+    visibility: hidden;
+  }
+}

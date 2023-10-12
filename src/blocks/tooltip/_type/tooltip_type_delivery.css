@@ -2,3 +2,9 @@
   bottom: -58px;
   left: 38%;
 }
+
+@media screen and (max-width: 1023px) {
+  .tooltip_type_delivery {
+    left: 23%;
+  }
+}
