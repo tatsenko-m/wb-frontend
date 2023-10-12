@@ -409,7 +409,7 @@
         </li>
       </ul>
     </nav>
-    <div class="popup">
+    <!-- <div class="popup">
       <div class="popup__container">
         <div class="popup__header">
           <h3 class="popup__heading">Способ доставки</h3>
@@ -425,7 +425,7 @@
             <ul class="popup__address-list">
               <li class="popup__address">
                 <label class="popup__address-label">
-                  <input class="popup__radio" type="radio" name="address">
+                  <input class="popup__radio" type="radio" name="address" checked>
                   <div class="address-info">
                     <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
                     <div class="address-info__pickup-point-info">
@@ -473,6 +473,51 @@
                       </p>
                     </div>
                   </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+            </ul>
+          </div>
+          <div class="popup__footer">
+            <button class="submit-button popup__choose-button" type="submit">
+              Выбрать
+            </button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <div class="popup">
+      <div class="popup__container">
+        <div class="popup__header">
+          <h3 class="popup__heading">Способ доставки</h3>
+          <button class="popup__close-button" type="button"></button>
+        </div>
+        <form class="popup__form">
+          <div class="popup__content">
+            <div class="popup__menu">
+              <button  class="popup__menu-button popup__menu-button_active" type="button">В пункт выдачи</button>
+              <button  class="popup__menu-button" type="button">Курьером</button>
+            </div>
+            <h4 class="popup__subheading">Мои адреса</h4>
+            <ul class="popup__address-list">
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address" checked>
+                  <p class="address-info__address popup__address-text">Бишкек, улица Табышалиева, 57</p>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <p class="address-info__address popup__address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__address-label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <p class="address-info__address popup__address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
                 </label>
                 <button class="delete-btn popup__delete-btn" type="button"></button>
               </li>
