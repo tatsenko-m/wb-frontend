@@ -138,3 +138,31 @@ export const pickupAddressHTML = `<li class="popup__address">
 </label>
 <button class="delete-btn popup__delete-btn" type="button"></button>
 </li>`;
+
+export const accordionButtons = document.querySelectorAll(
+  ".cart-items__accordion-btn"
+);
+export const refusalHoverableElements = document.querySelectorAll(
+  ".refusal__text-hoverable"
+);
+export const recipientInputs = document.querySelectorAll(".recipient__input");
+export const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
+export const secondDeliveryField = document.querySelectorAll(
+  ".delivery__field_include-items"
+)[1];
+export const openDeliveryPopupButtons = document.querySelectorAll(
+  ".open-delivery-popup-btn"
+);
+export const openPaymentPopupButtons = document.querySelectorAll(
+  ".open-payment-popup-btn"
+);
+export const deliveryPopup = document.querySelector("#popup-delivery");
+export const paymentPopup = document.querySelector("#popup-payment");
+export const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
+export const paymentCaption = document.querySelector(".payment__caption");
+export const courierButton = document.querySelector(
+  ".popup__menu-button:not(.popup__menu-button_active)"
+);
+export const pickupButton = document.querySelector(".popup__menu-button_active");
+export const addressList = document.querySelector(".popup__address-list");
+export const phoneInput = document.querySelector('input[name="phone"]');

@@ -3,36 +3,29 @@ import {
   initialItems,
   courierAddressHTML,
   pickupAddressHTML,
+  accordionButtons,
+  refusalHoverableElements,
+  recipientInputs,
+  labelCheckAll,
+  secondDeliveryField,
+  openDeliveryPopupButtons,
+  openPaymentPopupButtons,
+  deliveryPopup,
+  paymentPopup,
+  confirmOrderButton,
+  paymentCaption,
+  courierButton,
+  pickupButton,
+  addressList,
+  phoneInput,
 } from "../utils/constants";
+import {
+  formatQuantity,
+  formatPrice,
+  addSpaces,
+  updateParentDisplay,
+} from "../utils/utils";
 import ItemCard from "../components/ItemCard";
-
-const accordionButtons = document.querySelectorAll(
-  ".cart-items__accordion-btn"
-);
-const refusalHoverableElements = document.querySelectorAll(
-  ".refusal__text-hoverable"
-);
-const recipientInputs = document.querySelectorAll(".recipient__input");
-const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
-const secondDeliveryField = document.querySelectorAll(
-  ".delivery__field_include-items"
-)[1];
-const openDeliveryPopupButtons = document.querySelectorAll(
-  ".open-delivery-popup-btn"
-);
-const openPaymentPopupButtons = document.querySelectorAll(
-  ".open-payment-popup-btn"
-);
-const deliveryPopup = document.querySelector("#popup-delivery");
-const paymentPopup = document.querySelector("#popup-payment");
-const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
-const paymentCaption = document.querySelector(".payment__caption");
-const courierButton = document.querySelector(
-  ".popup__menu-button:not(.popup__menu-button_active)"
-);
-const pickupButton = document.querySelector(".popup__menu-button_active");
-const addressList = document.querySelector(".popup__address-list");
-const phoneInput = document.querySelector('input[name="phone"]');
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -113,42 +106,6 @@ function updateCartInfo() {
   totalDiscountElement.textContent = formatPrice(totalDiscount);
 }
 
-function formatQuantity(quantity) {
-  if (quantity % 10 === 1 && quantity % 100 !== 11) {
-    return `${quantity} товар`;
-  } else if (
-    quantity % 10 >= 2 &&
-    quantity % 10 <= 4 &&
-    !(quantity % 100 >= 12 && quantity % 100 <= 14)
-  ) {
-    return `${quantity} товара`;
-  } else {
-    return `${quantity} товаров`;
-  }
-}
-
-function formatPrice(price) {
-  const formattedPrice = price
-    .toFixed(0)
-    .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-    .replace(".", ",");
-  return `${formattedPrice} сом`;
-}
-
-function addSpaces(input) {
-  input = input.replace(/\s/g, "");
-  let formatted = "";
-  let groups = [0, 2, 5, 8, 10, 12];
-  for (let i = 0; i < input.length; i++) {
-    if (groups.includes(i)) {
-      formatted += " " + input[i];
-    } else {
-      formatted += input[i];
-    }
-  }
-  return formatted.trim();
-}
-
 function formatPhoneNumber() {
   const regex = /[a-zA-Zа-яА-Я]/g;
   phoneInput.value = addSpaces(phoneInput.value);
@@ -171,20 +128,6 @@ function addCounterInputEventListeners() {
       updateBadges(cardId, inputValue);
     });
   });
-}
-
-function updateParentDisplay(container, childElementClass) {
-  const childElements = container.querySelectorAll(childElementClass);
-  let hasVisibleElement = false;
-
-  childElements.forEach((element) => {
-    if (window.getComputedStyle(element).display !== "none") {
-      hasVisibleElement = true;
-      return;
-    }
-  });
-
-  container.parentElement.style.display = hasVisibleElement ? "flex" : "none";
 }
 
 function addCheckboxEventListeners() {
