@@ -660,7 +660,9 @@ async function init() {
 
   recipientInputs.forEach((input) => {
     input.addEventListener("input", function () {
-      handleInputBlur(input);
+      if (input.classList.contains("error")) {
+        handleInputBlur(input);
+      }
     });
 
     input.addEventListener("focus", function () {
@@ -671,12 +673,7 @@ async function init() {
     });
 
     input.addEventListener("blur", function () {
-      const correspondingLabel = document.querySelector(
-        `[for="${input.getAttribute("id")}"]`
-      );
-      if (input.value === "") {
-        correspondingLabel.classList.remove("recipient__label_visible");
-      }
+      handleInputBlur(input);
     });
   });
 
