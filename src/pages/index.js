@@ -149,7 +149,12 @@ function addSpaces(input) {
 }
 
 function formatPhoneNumber() {
+  const regex = /[a-zA-Zа-яА-Я]/g;
   phoneInput.value = addSpaces(phoneInput.value);
+
+  if (regex.test(phoneInput.value)) {
+    phoneInput.value = phoneInput.value.replace(regex, "");
+  }
 }
 
 function addCounterInputEventListeners() {
