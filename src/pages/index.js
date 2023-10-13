@@ -1,5 +1,9 @@
 import "./index.css";
-import { initialItems, courierAddressHTML, pickupAddressHTML } from "../utils/constants";
+import {
+  initialItems,
+  courierAddressHTML,
+  pickupAddressHTML,
+} from "../utils/constants";
 import ItemCard from "../components/ItemCard";
 
 const accordionButtons = document.querySelectorAll(
@@ -22,9 +26,11 @@ const deliveryPopup = document.querySelector("#popup-delivery");
 const paymentPopup = document.querySelector("#popup-payment");
 const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
 const paymentCaption = document.querySelector(".payment__caption");
-const courierButton = document.querySelector('.popup__menu-button:not(.popup__menu-button_active)');
-const pickupButton = document.querySelector('.popup__menu-button_active');
-const addressList = document.querySelector('.popup__address-list');
+const courierButton = document.querySelector(
+  ".popup__menu-button:not(.popup__menu-button_active)"
+);
+const pickupButton = document.querySelector(".popup__menu-button_active");
+const addressList = document.querySelector(".popup__address-list");
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -262,6 +268,45 @@ function updateBadges(cardId, inputValue) {
   }
 }
 
+function handleEscClose(popup, closePopupFunc, evt) {
+  if (evt.key === "Escape") {
+    closePopupFunc(popup);
+  }
+}
+
+function submitPopup(popup, closePopupFunc, evt) {
+  evt.preventDefault();
+  closePopupFunc(popup);
+}
+
+function openPopup(popup, closePopupFunc) {
+  const popupCloseButton = popup.querySelector(".popup__close-button");
+  const popupSubmitButton = popup.querySelector(".popup__choose-button");
+
+  popup.classList.add("popup_opened");
+
+  popupCloseButton.addEventListener("click", closePopupFunc.bind(null, popup));
+  popupSubmitButton.addEventListener(
+    "click",
+    submitPopup.bind(null, popup, closePopupFunc)
+  );
+  document.addEventListener(
+    "keydown",
+    handleEscClose.bind(null, popup, closePopupFunc)
+  );
+}
+
+function closePopup(popup) {
+  const popupCloseButton = popup.querySelector(".popup__close-button");
+  const popupSubmitButton = popup.querySelector(".popup__choose-button");
+
+  popup.classList.remove("popup_opened");
+
+  popupCloseButton.removeEventListener("click", closePopup);
+  popupSubmitButton.removeEventListener("click", submitPopup);
+  document.removeEventListener("keydown", handleEscClose);
+}
+
 async function init() {
   await new Promise((resolve) => {
     if (document.readyState === "complete") {
@@ -326,27 +371,27 @@ async function init() {
     });
   });
 
-  courierButton.addEventListener('click', () => {
-    courierButton.classList.add('popup__menu-button_active');
-    pickupButton.classList.remove('popup__menu-button_active');
+  courierButton.addEventListener("click", () => {
+    courierButton.classList.add("popup__menu-button_active");
+    pickupButton.classList.remove("popup__menu-button_active");
     addressList.innerHTML = courierAddressHTML;
   });
 
-  pickupButton.addEventListener('click', () => {
-    pickupButton.classList.add('popup__menu-button_active');
-    courierButton.classList.remove('popup__menu-button_active');
+  pickupButton.addEventListener("click", () => {
+    pickupButton.classList.add("popup__menu-button_active");
+    courierButton.classList.remove("popup__menu-button_active");
     addressList.innerHTML = pickupAddressHTML;
   });
 
   openDeliveryPopupButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      deliveryPopup.classList.add('popup_opened');
+    btn.addEventListener("click", () => {
+      openPopup(deliveryPopup, closePopup);
     });
   });
 
   openPaymentPopupButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      paymentPopup.classList.add('popup_opened');
+    btn.addEventListener("click", () => {
+      openPopup(paymentPopup, closePopup);
     });
   });
 
