@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары и точка</title>
+  <script defer src="main.8f405653c291ed6bc4a2.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <button class="burger-menu-btn header__burger-menu-btn" type="button">
+          <span class="burger-menu-btn__line"></span>
+        </button>
+        <a class="header__logo-link" href="/">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="images/logo-mobile.9632d67c2b760247684e.svg"
+            />
+            <source srcset="images/logo-desktop.297219445be7c092d618.svg" />
+            <img
+              class="header__logo"
+              src="images/logo-desktop.297219445be7c092d618.svg"
+              alt="Логотип Товары и точка"
+            />
+          </picture>
+        </a>
+        <form class="search-form header__search-form">
+          <input
+            class="search-form__input"
+            type="text"
+            placeholder="Я ищу..."
+          />
+          <button class="search-form__btn" type="submit"></button>
+        </form>
+        <button class="header__search-btn" type="button"></button>
+        <nav class="header__navbar-desktop navbar-desktop">
+          <a class="navbar-desktop__link" href="#"
+            ><span
+              class="navbar-desktop__icon navbar-desktop__icon_type_profile"
+            ></span
+            >Профиль</a
+          >
+          <a class="navbar-desktop__link" href="#"
+            ><span
+              class="navbar-desktop__icon navbar-desktop__icon_type_basket navbar-desktop__icon_badged"
+            ></span>
+            <div class="notification-badge">3</div>
+            Корзина
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <form class="cart-form">
+        <div class="cart-content">
+          <section class="cart-items">
+            <h2 class="cart-items__heading">Корзина</h2>
+            <div class="cart-items__accordion">
+              <label class="checkbox-label checkbox-label_type_check-all">
+                <input
+                  type="checkbox"
+                  class="checkbox-label__invisible-item"
+                  name="checkAll"
+                  checked
+                />
+                <span class="checkbox-label__pseudo-item"></span>
+                <span
+                  class="checkbox-label__text checkbox-label__text_type_check-all"
+                  >Выбрать все</span
+                >
+              </label>
+              <button class="cart-items__accordion-btn" type="button"></button>
+            </div>
+            <ul class="cart-items__list" id="added-items"></ul>
+            <div class="cart-items__accordion">
+              <p class="cart-items__list-heading">Отсутствуют · 3 товара</p>
+              <button class="cart-items__accordion-btn" type="button"></button>
+            </div>
+            <ul class="cart-items__list" id="unavailable-items"></ul>
+          </section>
+          <section class="delivery cart-section">
+            <div class="cart-section__header">
+              <h3 class="cart-section__heading">Способ доставки</h3>
+              <button class="cart-section__change-btn open-delivery-popup-btn" type="button">
+                Изменить
+              </button>
+            </div>
+            <div class="delivery__content">
+              <div class="delivery__field">
+                <p class="delivery__option">Пункт выдачи</p>
+                <div class="delivery__address-info address-info">
+                  <p class="address-info__address">
+                    Бишкек, улица Ахматбека Суюмбаева, 12/1
+                  </p>
+                  <div class="address-info__pickup-point-info">
+                    <div class="address-info__pickup-point-rating">
+                      <div class="address-info__pickup-point-star"></div>
+                      <p class="address-info__pickup-point-grade">4.99</p>
+                    </div>
+                    <p class="address-info__pickup-point-hours">
+                      Ежедневно с 10 до 21
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="delivery__field">
+                <p class="delivery__option">Стоимость доставки</p>
+                <p class="delivery__cost">Бесплатно</p>
+              </div>
+              <div class="delivery__field delivery__field_include-items">
+                <p class="delivery__option">5—6 февраля</p>
+                <ul class="delivery__items-list">
+                  <li class="item-image delivery__item delivery__item_id-1">
+                    <img
+                      class="item-image__image"
+                      src="images/t-shirt.bb8164d4f4993ed9a760.png"
+                      alt="Футболка UZcotton мужская"
+                    />
+                  </li>
+                  <li class="item-image delivery__item delivery__item_id-2">
+                    <div class="notification-badge notification-badge_delivery">
+                      184
+                    </div>
+                    <img
+                      class="item-image__image"
+                      src="images/iphone-case.d52f0b34a4d533051db6.png"
+                      alt="Силиконовый чехол"
+                    />
+                  </li>
+                  <li class="item-image delivery__item delivery__item_id-3">
+                    <div class="notification-badge notification-badge_delivery">
+                      2
+                    </div>
+                    <img
+                      class="item-image__image"
+                      src="images/pencils.d49d5d6700fae37a739f.png"
+                      alt="Карандаши цветные"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="delivery__field delivery__field_include-items">
+                <p class="delivery__option">7—8 февраля</p>
+                <ul class="delivery__items-list">
+                  <li class="item-image delivery__item delivery__item_id-2">
+                    <div
+                      class="notification-badge notification-badge_delivery notification-badge_delivery-modified"
+                    >
+                      16
+                    </div>
+                    <img
+                      class="item-image__image"
+                      src="images/iphone-case.d52f0b34a4d533051db6.png"
+                      alt="Силиконовый чехол"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="refusal delivery__refusal">
+              <div class="refusal__check"></div>
+              <p class="refusal__text">
+                Обратная доставка товаров на склад при&nbsp;отказе —<span
+                  class="refusal__text-hoverable"
+                  >бесплатно</span
+                >
+              </p>
+              <div class="tooltip tooltip_type_refusal tooltip_type_delivery">
+                <p class="tooltip__text">
+                  Если товары вам не подойдут, мы вернем их обратно на склад —
+                  это бесплатно
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="payment cart-section">
+            <div class="cart-section__header">
+              <h3 class="cart-section__heading">Способ оплаты</h3>
+              <button class="cart-section__change-btn open-payment-popup-btn" type="button">
+                Изменить
+              </button>
+            </div>
+            <div class="payment__card">
+              <div class="card-logo card-logo_type_mir"></div>
+              <p class="payment__card-field">1234 56•• •••• 1234</p>
+              <p class="payment__card-field">01/30</p>
+            </div>
+            <p class="payment__caption">Спишем оплату с карты при получении</p>
+          </section>
+          <section class="cart-section recipient">
+            <div class="cart-section__header recipient__header">
+              <h3 class="cart-section__heading">Получатель</h3>
+            </div>
+            <fieldset class="recipient__fieldset">
+              <div class="recipient__field">
+                <label class="recipient__label" for="name">Имя</label>
+                <input
+                  class="recipient__input"
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="Имя"
+                />
+                <span class="recipient__error"></span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="surname">Фамилия</label>
+                <input
+                  class="recipient__input"
+                  name="surname"
+                  id="surname"
+                  type="text"
+                  placeholder="Фамилия"
+                />
+                <span class="recipient__error"></span>
+              </div>
+            </fieldset>
+            <fieldset class="recipient__fieldset">
+              <div class="recipient__field">
+                <label class="recipient__label" for="email">Почта</label>
+                <input
+                  class="recipient__input"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Почта"
+                />
+                <span class="recipient__error"></span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="phone">Телефон</label>
+                <input
+                  class="recipient__input"
+                  name="phone"
+                  id="phone"
+                  type="tel"
+                  maxlength="30"
+                  placeholder="Телефон"
+                />
+                <span class="recipient__error"></span>
+              </div>
+              <div class="recipient__field">
+                <label class="recipient__label" for="inn">ИНН</label>
+                <input
+                  class="recipient__input"
+                  name="inn"
+                  id="inn"
+                  type="text"
+                  placeholder="ИНН"
+                />
+                <span class="recipient__caption"
+                  >Для таможенного оформления</span
+                >
+                <span class="recipient__error"></span>
+              </div>
+            </fieldset>
+          </section>
+        </div>
+        <section class="cart-section total">
+          <div class="total__order-details">
+            <div class="total__calculations">
+              <div class="cart-section__header total__header">
+                <h3 class="cart-section__heading">Итого</h3>
+                <p class="cart-section__heading" id="total-new-cost">
+                  2 101 063<span class="total__heading-currency"> сом</span>
+                </p>
+              </div>
+              <div class="total__calculations-fields">
+                <div class="total__calculations-field">
+                  <p class="total__calculations-text" id="total-quantity">
+                    203 товара
+                  </p>
+                  <p class="total__calculations-text" id="total-old-cost">
+                    2 302 048 сом
+                  </p>
+                </div>
+                <div class="total__calculations-field">
+                  <p class="total__calculations-text">Скидка</p>
+                  <p class="total__calculations-text" id="total-discount">
+                    −200 985 сом
+                  </p>
+                </div>
+                <div class="total__calculations-field">
+                  <p class="total__calculations-text">Доставка</p>
+                  <p class="total__calculations-text">Бесплатно</p>
+                </div>
+              </div>
+            </div>
+            <div class="total__subsection">
+              <div class="total__resume-block">
+                <div class="total__resume-heading-block">
+                  <h4 class="total__resume-heading">Доставка в пункт выдачи</h4>
+                  <button class="total__change-btn open-delivery-popup-btn" type="button"></button>
+                </div>
+                <p class="total__ordinary-text">
+                  Бишкек, улица Ахматбека Суюмбаева, 12/1
+                </p>
+                <p class="total__ordinary-text total__date">5–8 фев</p>
+              </div>
+              <div class="total__highlighted-block">
+                <div class="refusal">
+                  <div class="refusal__check"></div>
+                  <p class="refusal__text">
+                    Обратная доставка товаров на&nbsp;склад при&nbsp;отказе
+                    —<span
+                      class="refusal__text-hoverable total__refusal-text-hoverable"
+                      >бесплатно</span
+                    >
+                  </p>
+                  <div class="tooltip tooltip_type_refusal tooltip_type_total">
+                    <p class="tooltip__text">
+                      Если товары вам не подойдут, мы вернем их обратно на склад
+                      — это бесплатно
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="total__subsection">
+              <div class="total__resume-block">
+                <div class="total__resume-heading-block">
+                  <h4 class="total__resume-heading">Оплата картой</h4>
+                  <button class="total__change-btn open-payment-popup-btn" type="button"></button>
+                </div>
+                <div class="total__card">
+                  <div class="card-logo card-logo_type_mir"></div>
+                  <p class="total__ordinary-text total__card-number">
+                    1234 12•• •••• 1234
+                  </p>
+                </div>
+              </div>
+              <div class="total__highlighted-block">
+                <label
+                  class="checkbox-label checkbox-label_type_pay-immediately"
+                >
+                  <input
+                    type="checkbox"
+                    class="checkbox-label__invisible-item"
+                    name="payImmediately"
+                  />
+                  <span class="checkbox-label__pseudo-item"></span>
+                  <span class="total__ordinary-text">Списать оплату сразу</span>
+                </label>
+                <p class="total__ordinary-text">
+                  Спишем оплату с карты при получении
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="total__confirm-order">
+            <button
+              class="submit-button total__confirm-order-btn"
+              type="submit"
+            >
+              Заказать
+            </button>
+            <div class="total__offer-accept">
+              <div class="total__offer-accept-check"></div>
+              <p class="total__ordinary-text">
+                Соглашаюсь&nbsp;<a
+                  class="total__offer-accept-link total__offer-accept-link_terms-of-use"
+                  id="terms-of-use"
+                  href="#"
+                  >с&thinsp;правилами&thinsp;пользования&thinsp;торговой
+                  площадкой</a
+                >
+                и&nbsp;<a class="total__offer-accept-link" href="#">возврата</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; 2022&nbsp;&nbsp;ООО «Товары и точка»
+      </p>
+    </footer>
+    <nav class="navbar-mobile">
+      <ul class="navbar-mobile__list">
+        <li class="navbar-mobile__item">
+          <a class="navbar-mobile__link navbar-mobile__link_type_main" href="/">
+          </a>
+        </li>
+        <li class="navbar-mobile__item">
+          <a
+            class="navbar-mobile__link navbar-mobile__link_type_catalog"
+            href="#"
+          ></a>
+        </li>
+        <li class="navbar-mobile__item">
+          <a class="navbar-mobile__link navbar-mobile__link_type_cart" href="#">
+            <div class="notification-badge notification-badge_navbar-mobile">
+              3
+            </div>
+          </a>
+        </li>
+        <li class="navbar-mobile__item">
+          <a
+            class="navbar-mobile__link navbar-mobile__link_type_favorites"
+            href="#"
+          ></a>
+        </li>
+        <li class="navbar-mobile__item">
+          <a
+            class="navbar-mobile__link navbar-mobile__link_type_profile"
+            href="#"
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="popup-delivery" class="popup">
+      <div class="popup__container popup__container_type_delivery">
+        <div class="popup__header">
+          <h3 class="popup__heading">Способ доставки</h3>
+          <button class="popup__close-button" type="button"></button>
+        </div>
+        <form class="popup__form">
+          <div class="popup__content">
+            <div class="popup__menu">
+              <button  class="popup__menu-button popup__menu-button_active" type="button">В пункт выдачи</button>
+              <button  class="popup__menu-button" type="button">Курьером</button>
+            </div>
+            <h4 class="popup__subheading">Мои адреса</h4>
+            <ul class="popup__address-list">
+              <li class="popup__address">
+                <label class="popup__label">
+                  <input class="popup__radio" type="radio" name="address" checked>
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                      </div>
+                      <p class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                        <p class="address-info__pickup-point-grade">4.99</p>
+                      </div>
+                      <p class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+              <li class="popup__address">
+                <label class="popup__label">
+                  <input class="popup__radio" type="radio" name="address">
+                  <div class="address-info">
+                    <p class="address-info__address popup__address-text">г. Бишкек, улица Табышалиева, д. 57</p>
+                    <div class="address-info__pickup-point-info">
+                      <div class="address-info__pickup-point-rating">
+                        <div class="address-info__pickup-point-star"></div>
+                        <p class="address-info__pickup-point-grade">4.99</p>
+                      </div>
+                      <p  class="popup__pickup-point-caption">
+                        Пункт выдачи
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <button class="delete-btn popup__delete-btn" type="button"></button>
+              </li>
+            </ul>
+          </div>
+          <div class="popup__footer">
+            <button class="submit-button popup__choose-button" type="submit">
+              Выбрать
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="popup-payment" class="popup">
+      <div class="popup__container">
+        <div class="popup__header popup__header_type_payment">
+          <h3 class="popup__heading">Способ оплаты</h3>
+          <button class="popup__close-button popup__close-button_type_payment" type="button"></button>
+        </div>
+        <form class="popup__form">
+          <div class="popup__content popup__content_type_payment">
+            <ul class="popup__card-list">
+              <li class="popup__card">
+                <label class="popup__label">
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                    checked
+                  />
+                  <div class="popup__card-details">
+                    <div class="card-logo card-logo_type_mir"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
+                </label>
+              </li>
+              <li class="popup__card">
+                <label class="popup__label">
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card-details">
+                    <div class="card-logo card-logo_type_visa"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
+                </label>
+              </li>
+              <li class="popup__card">
+                <label class="popup__label">
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card-details">
+                    <div class="card-logo card-logo_type_mastercard"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
+                </label>
+              </li>
+              <li class="popup__card">
+                <label class="popup__label">
+                  <input
+                    class="popup__radio"
+                    type="radio"
+                    name="card"
+                  />
+                  <div class="popup__card-details">
+                    <div class="card-logo card-logo_type_maestro"></div>
+                    <p class="popup__card-text">1234 56•• •••• 1234</p>
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="popup__footer">
+            <button class="submit-button popup__choose-button" type="submit">
+              Выбрать
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <template id="item-template">
+      <li class="item">
+        <div class="item__good-img-block">
+          <label class="checkbox-label checkbox-label_type_check-item">
+            <input
+              type="checkbox"
+              class="checkbox-label__invisible-item"
+              name="check"
+              checked
+            />
+            <span class="checkbox-label__pseudo-item"></span>
+          </label>
+          <a class="item-image" href="#">
+            <img class="item-image__image" src="/" alt="" />
+          </a>
+        </div>
+        <div class="item__good-info">
+          <p class="item__good-title"></p>
+          <div class="item__good-features"></div>
+          <div class="item__vendor">
+            <p class="item__warehouse"></p>
+            <div class="item__company-info">
+              <p class="item__company-name"></p>
+              <div class="item__company-details-icon"></div>
+              <div class="tooltip">
+                <p class="tooltip__text tooltip__company-name"></p>
+                <p class="tooltip__text tooltip__ogrn"></p>
+                <p class="tooltip__text tooltip__address"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item__count item__count_no-warning">
+          <div class="counter">
+            <button class="counter__btn counter__minus-btn" type="button">
+              −
+            </button>
+            <input type="number" class="counter__input" value="" />
+            <button class="counter__btn counter__plus-btn" type="button">
+              +
+            </button>
+          </div>
+          <div class="item__actions">
+            <button class="item__like-btn" type="button"></button>
+            <button class="delete-btn item__delete-btn" type="button"></button>
+          </div>
+        </div>
+        <div class="item__price">
+          <div class="item__price-new">
+            <p class="item__price-new-number"></p>
+            <p class="item__price-new-currency">сом</p>
+          </div>
+          <p class="item__price-old"></p>
+          <div class="tooltip tooltip_type_discount">
+            <div class="tooltip__field">
+              <p class="tooltip__text tooltip__field-name">Скидка 55%</p>
+              <p class="tooltip__text">−300 сом</p>
+            </div>
+            <div class="tooltip__field">
+              <p class="tooltip__text tooltip__field-name">
+                Скидка покупателя 10%
+              </p>
+              <p class="tooltip__text">−30 сом</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>
