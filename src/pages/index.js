@@ -387,6 +387,209 @@ async function init() {
     }
   });
 
+  function validateName(input, errorSpan) {
+    if (input.value.trim() === "") {
+      errorSpan.textContent = "Укажите имя";
+      input.classList.add("error");
+    } else {
+      errorSpan.textContent = "";
+      input.classList.remove("error");
+    }
+  }
+
+  function validateSurname(input, errorSpan) {
+    if (input.value.trim() === "") {
+      errorSpan.textContent = "Введите фамилию";
+      input.classList.add("error");
+    } else {
+      errorSpan.textContent = "";
+      input.classList.remove("error");
+    }
+  }
+
+  function validateEmail(input, errorSpan) {
+    if (input.value.trim() === "") {
+      errorSpan.textContent = "Укажите электронную почту";
+      input.classList.add("error");
+    } else {
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(input.value)) {
+        errorSpan.textContent = "Проверьте адрес электронной почты";
+        input.classList.add("error");
+      } else {
+        errorSpan.textContent = "";
+        input.classList.remove("error");
+      }
+    }
+  }
+
+  function validatePhone(input, errorSpan) {
+    if (input.value.trim() === "") {
+      errorSpan.textContent = "Укажите номер телефона";
+      input.classList.add("error");
+    } else {
+      const phoneRegex = /^\+\d \d{3} \d{3} \d{2} \d{2}$/;
+      if (!phoneRegex.test(input.value)) {
+        errorSpan.textContent = "Формат: +9 999 999 99 99";
+        input.classList.add("error");
+      } else {
+        errorSpan.textContent = "";
+        input.classList.remove("error");
+      }
+    }
+  }
+
+  function validateInn(input, errorSpan) {
+    if (input.value.trim() === "") {
+      errorSpan.textContent = "Укажите ИНН";
+      input.classList.add("error");
+    } else {
+      if (input.value.trim().length !== 14 || isNaN(input.value.trim())) {
+        errorSpan.textContent = "Проверьте ИНН";
+        input.classList.add("error");
+      } else {
+        errorSpan.textContent = "";
+        input.classList.remove("error");
+      }
+    }
+  }
+
+  function handleInputBlur(input) {
+    const correspondingLabel = document.querySelector(
+      `[for="${input.getAttribute("id")}"]`
+    );
+    let errorSpan;
+
+    if (input.value === "") {
+      errorSpan = input.nextElementSibling.classList.contains(
+        "recipient__error"
+      )
+        ? input.nextElementSibling
+        : input.nextElementSibling.nextElementSibling;
+      if (!input.classList.contains("error")) {
+        correspondingLabel.classList.remove("recipient__label_visible");
+      }
+    } else {
+      switch (input.getAttribute("name")) {
+        case "name":
+          errorSpan = input.nextElementSibling.classList.contains(
+            "recipient__error"
+          )
+            ? input.nextElementSibling
+            : input.nextElementSibling.nextElementSibling;
+          validateName(input, errorSpan);
+          break;
+        case "surname":
+          errorSpan = input.nextElementSibling.classList.contains(
+            "recipient__error"
+          )
+            ? input.nextElementSibling
+            : input.nextElementSibling.nextElementSibling;
+          validateSurname(input, errorSpan);
+          break;
+        case "email":
+          errorSpan = input.nextElementSibling.classList.contains(
+            "recipient__error"
+          )
+            ? input.nextElementSibling
+            : input.nextElementSibling.nextElementSibling;
+          validateEmail(input, errorSpan);
+          break;
+        case "phone":
+          errorSpan = input.nextElementSibling.classList.contains(
+            "recipient__error"
+          )
+            ? input.nextElementSibling
+            : input.nextElementSibling.nextElementSibling;
+          validatePhone(input, errorSpan);
+          break;
+        case "inn":
+          errorSpan = input.nextElementSibling.classList.contains(
+            "recipient__error"
+          )
+            ? input.nextElementSibling
+            : input.nextElementSibling.nextElementSibling;
+          validateInn(input, errorSpan);
+          break;
+        default:
+          break;
+      }
+    }
+  }
+
+  recipientInputs.forEach((input) => {
+    input.addEventListener("focus", function () {
+      const correspondingLabel = document.querySelector(
+        `[for="${input.getAttribute("id")}"]`
+      );
+      correspondingLabel.classList.add("recipient__label_visible");
+    });
+
+    input.addEventListener("blur", function () {
+      handleInputBlur(input);
+    });
+  });
+
+  document.querySelector("form").addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    formSubmitted = true;
+
+    recipientInputs.forEach((input) => {
+      let errorSpan;
+      if (input.nextElementSibling.classList.contains("recipient__error")) {
+        errorSpan = input.nextElementSibling;
+      } else {
+        errorSpan = input.nextElementSibling.nextElementSibling;
+      }
+
+      if (input.value.trim() === "" && input.getAttribute("name") === "name") {
+        errorSpan.textContent = "Укажите имя";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "surname"
+      ) {
+        errorSpan.textContent = "Введите фамилию";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "email"
+      ) {
+        errorSpan.textContent = "Укажите электронную почту";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "phone"
+      ) {
+        errorSpan.textContent = "Укажите номер телефона";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "inn"
+      ) {
+        errorSpan.textContent = "Укажите ИНН";
+      } else {
+        errorSpan.textContent = "";
+      }
+
+      if (input.getAttribute("name") === "email" && input.value.trim() !== "") {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(input.value)) {
+          errorSpan.textContent = "Проверьте адрес электронной почты";
+        }
+      }
+
+      if (input.getAttribute("name") === "phone" && input.value.trim() !== "") {
+        const phoneRegex = /^\+\d \d{3} \d{3} \d{2} \d{2}$/;
+        if (!phoneRegex.test(input.value)) {
+          errorSpan.textContent = "Формат: +9 999 999 99 99";
+        }
+      }
+
+      if (input.getAttribute("name") === "inn" && input.value.trim() !== "") {
+        if (input.value.trim().length !== 14 || isNaN(input.value.trim())) {
+          errorSpan.textContent = "Проверьте ИНН";
+        }
+      }
+    });
+  });
+
   renderItems(
     initialItems,
     "#added-items",
@@ -456,6 +659,10 @@ async function init() {
   });
 
   recipientInputs.forEach((input) => {
+    input.addEventListener("input", function () {
+      handleInputBlur(input);
+    });
+
     input.addEventListener("focus", function () {
       const correspondingLabel = document.querySelector(
         `[for="${input.getAttribute("id")}"]`
@@ -473,66 +680,15 @@ async function init() {
     });
   });
 
-  function validateFields() {
-    recipientInputs.forEach((input) => {
-      let errorSpan;
-
-      if (input.nextElementSibling.classList.contains("recipient__error")) {
-        errorSpan = input.nextElementSibling;
-      } else {
-        errorSpan = input.nextElementSibling.nextElementSibling;
-      }
-
-      if (input.value.trim() === "" && input.getAttribute("name") === "name") {
-        errorSpan.textContent = "Укажите имя";
-      } else if (
-        input.value.trim() === "" &&
-        input.getAttribute("name") === "surname"
-      ) {
-        errorSpan.textContent = "Введите фамилию";
-      } else if (
-        input.value.trim() === "" &&
-        input.getAttribute("name") === "email"
-      ) {
-        errorSpan.textContent = "Укажите электронную почту";
-      } else if (
-        input.value.trim() === "" &&
-        input.getAttribute("name") === "phone"
-      ) {
-        errorSpan.textContent = "Укажите номер телефона";
-      } else if (
-        input.value.trim() === "" &&
-        input.getAttribute("name") === "inn"
-      ) {
-        errorSpan.textContent = "Укажите ИНН";
-      } else {
-        errorSpan.textContent = "";
-      }
-
-      if (input.getAttribute("name") === "email" && input.value.trim() !== "") {
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-        if (!emailRegex.test(input.value)) {
-          errorSpan.textContent = "Проверьте адрес электронной почты";
-        }
-      }
-
-      if (input.getAttribute("name") === "phone" && input.value.trim() !== "") {
-        const phoneRegex = /^\+\d \d{3} \d{3} \d{2} \d{2}$/;
-        if (!phoneRegex.test(input.value)) {
-          errorSpan.textContent = "Формат: +9 999 999 99 99";
-        }
-      }
-
-      if (input.getAttribute("name") === "inn" && input.value.trim() !== "") {
-        if (input.value.trim().length !== 14 || isNaN(input.value.trim())) {
-          errorSpan.textContent = "Проверьте ИНН";
-        }
-      }
-    });
-  }
-
   confirmOrderButton.addEventListener("click", function (evt) {
     evt.preventDefault();
+
+    const nameInput = document.getElementById("name");
+    const surnameInput = document.getElementById("surname");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const innInput = document.getElementById("inn");
+
     if (window.innerWidth <= 767) {
       const recipientErrorFields =
         document.querySelectorAll(".recipient__error");
@@ -546,7 +702,11 @@ async function init() {
         errorField.scrollIntoView({ behavior: "smooth" });
       }
     }
-    validateFields();
+    validateName(nameInput, nameInput.nextElementSibling);
+    validateSurname(surnameInput, surnameInput.nextElementSibling);
+    validateEmail(emailInput, emailInput.nextElementSibling);
+    validatePhone(phoneInput, phoneInput.nextElementSibling);
+    validateInn(innInput, innInput.nextElementSibling.nextElementSibling);
   });
 
   updateCartInfo();
