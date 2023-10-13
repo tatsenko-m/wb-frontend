@@ -140,6 +140,9 @@
 
 @import url(../blocks/card-logo/card-logo.css);
 @import url(../blocks/card-logo/_type/card-logo_type_mir.css);
+@import url(../blocks/card-logo/_type/card-logo_type_visa.css);
+@import url(../blocks/card-logo/_type/card-logo_type_mastercard.css);
+@import url(../blocks/card-logo/_type/card-logo_type_maestro.css);
 
 @import url(../blocks/recipient/recipient.css);
 @import url(../blocks/recipient/__header/recipient__header.css);
@@ -205,10 +208,12 @@
 @import url(../blocks/popup/__address/popup__address.css);
 @import url(../blocks/popup/__radio/popup__radio.css);
 @import url(../blocks/popup/__address-text/popup__address-text.css);
-@import url(../blocks/popup/__address-label/popup__address-label.css);
+@import url(../blocks/popup/__label/popup__label.css);
 @import url(../blocks/popup/__pickup-point-caption/popup__pickup-point-caption.css);
 @import url(../blocks/popup/__delete-btn/popup__delete-btn.css);
 @import url(../blocks/popup/__footer/popup__footer.css);
 @import url(../blocks/popup/__choose-button/popup__choose-button.css);
+@import url(../blocks/popup/__card-list/popup__card-list.css);
 @import url(../blocks/popup/__card/popup__card.css);
+@import url(../blocks/popup/__card-details/popup__card-details.css);
 @import url(../blocks/popup/__card-text/popup__card-text.css);

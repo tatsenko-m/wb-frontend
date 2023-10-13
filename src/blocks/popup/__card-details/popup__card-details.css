@@ -1,0 +1,7 @@
+.popup__card-details {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 4px;
+  margin-top: -3px;
+}
