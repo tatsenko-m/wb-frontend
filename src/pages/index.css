@@ -195,6 +195,7 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container/_type/popup__container_type_delivery.css);
 @import url(../blocks/popup/__header/popup__header.css);
 @import url(../blocks/popup/__header/_type/popup__header_type_payment.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
