@@ -31,6 +31,7 @@ const courierButton = document.querySelector(
 );
 const pickupButton = document.querySelector(".popup__menu-button_active");
 const addressList = document.querySelector(".popup__address-list");
+const phoneInput = document.querySelector('input[name="phone"]');
 
 let totalQuantity = 0;
 let totalNewCost = 0;
@@ -131,6 +132,24 @@ function formatPrice(price) {
     .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
     .replace(".", ",");
   return `${formattedPrice} сом`;
+}
+
+function addSpaces(input) {
+  input = input.replace(/\s/g, "");
+  let formatted = "";
+  let groups = [0, 2, 5, 8, 10, 12];
+  for (let i = 0; i < input.length; i++) {
+    if (groups.includes(i)) {
+      formatted += " " + input[i];
+    } else {
+      formatted += input[i];
+    }
+  }
+  return formatted.trim();
+}
+
+function formatPhoneNumber() {
+  phoneInput.value = addSpaces(phoneInput.value);
 }
 
 function addCounterInputEventListeners() {
@@ -375,6 +394,7 @@ async function init() {
 
   addCounterInputEventListeners();
   addCheckboxEventListeners();
+  phoneInput.addEventListener("input", formatPhoneNumber);
 
   accordionButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -427,6 +447,109 @@ async function init() {
     btn.addEventListener("click", () => {
       openPopup(paymentPopup, closePopup);
     });
+  });
+
+  const recipientInputs = document.querySelectorAll(".recipient__input");
+  const recipientLabels = document.querySelectorAll(".recipient__label");
+
+  recipientInputs.forEach((input) => {
+    input.addEventListener("focus", function () {
+      const correspondingLabel = document.querySelector(
+        `[for="${input.getAttribute("id")}"]`
+      );
+      correspondingLabel.classList.add("recipient__label_visible");
+    });
+
+    input.addEventListener("blur", function () {
+      const correspondingLabel = document.querySelector(
+        `[for="${input.getAttribute("id")}"]`
+      );
+      if (input.value === "") {
+        correspondingLabel.classList.remove("recipient__label_visible");
+      }
+    });
+  });
+
+  function validateFields() {
+    recipientInputs.forEach((input) => {
+      const correspondingLabel = document.querySelector(
+        `[for="${input.getAttribute("id")}"]`
+      );
+
+      let errorSpan;
+
+      if (input.nextElementSibling.classList.contains("recipient__error")) {
+        errorSpan = input.nextElementSibling;
+      } else {
+        errorSpan = input.nextElementSibling.nextElementSibling;
+      }
+
+      if (input.value.trim() === "" && input.getAttribute("name") === "name") {
+        errorSpan.textContent = "Укажите имя";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "surname"
+      ) {
+        errorSpan.textContent = "Введите фамилию";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "email"
+      ) {
+        errorSpan.textContent = "Укажите электронную почту";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "phone"
+      ) {
+        errorSpan.textContent = "Укажите номер телефона";
+      } else if (
+        input.value.trim() === "" &&
+        input.getAttribute("name") === "inn"
+      ) {
+        errorSpan.textContent = "Укажите ИНН";
+      } else {
+        errorSpan.textContent = "";
+      }
+
+      if (input.getAttribute("name") === "email" && input.value.trim() !== "") {
+        if (!/\S+@\S+\.\S+/.test(input.value)) {
+          errorSpan.textContent = "Проверьте адрес электронной почты";
+        }
+      }
+
+      if (input.getAttribute("name") === "phone" && input.value.trim() !== "") {
+        const phoneRegex = /^\+\d \d{3} \d{3} \d{2} \d{2}$/;
+        if (!phoneRegex.test(input.value)) {
+          errorSpan.textContent = "Формат: +9 999 999 99 99";
+        }
+      }
+
+      if (input.getAttribute("name") === "inn" && input.value.trim() !== "") {
+        if (input.value.trim().length !== 14 || isNaN(input.value.trim())) {
+          errorSpan.textContent = "Проверьте ИНН";
+        }
+      }
+    });
+  }
+
+  const confirmOrderButton = document.querySelector(
+    ".total__confirm-order-btn"
+  );
+  confirmOrderButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (window.innerWidth <= 767) {
+      const recipientErrorFields =
+        document.querySelectorAll(".recipient__error");
+      let errorField = null;
+      recipientErrorFields.forEach((error) => {
+        if (error.textContent.trim() !== "") {
+          errorField = error;
+        }
+      });
+      if (errorField) {
+        errorField.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    validateFields();
   });
 
   updateCartInfo();

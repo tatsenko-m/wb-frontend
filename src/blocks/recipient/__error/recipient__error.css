@@ -9,5 +9,5 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  visibility: hidden;
+  min-height: 14px;
 }
