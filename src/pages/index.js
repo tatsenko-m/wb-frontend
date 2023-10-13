@@ -12,6 +12,14 @@ const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
 const secondDeliveryField = document.querySelectorAll(
   ".delivery__field_include-items"
 )[1];
+const openDeliveryPopupButtons = document.querySelectorAll(
+  ".open-delivery-popup-btn"
+);
+const openPaymentPopupButtons = document.querySelectorAll(
+  ".open-payment-popup-btn"
+);
+const deliveryPopup = document.querySelector("#popup-delivery");
+const paymentPopup = document.querySelector("#popup-payment");
 const confirmOrderButton = document.querySelector(".total__confirm-order-btn");
 const paymentCaption = document.querySelector(".payment__caption");
 const courierButton = document.querySelector('.popup__menu-button:not(.popup__menu-button_active)');
@@ -328,6 +336,18 @@ async function init() {
     pickupButton.classList.add('popup__menu-button_active');
     courierButton.classList.remove('popup__menu-button_active');
     addressList.innerHTML = pickupAddressHTML;
+  });
+
+  openDeliveryPopupButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      deliveryPopup.classList.add('popup_opened');
+    });
+  });
+
+  openPaymentPopupButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      paymentPopup.classList.add('popup_opened');
+    });
   });
 
   updateCartInfo();

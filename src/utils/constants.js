@@ -64,21 +64,21 @@ export const initialItems = [
 ];
 
 export const courierAddressHTML = `<li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address" checked>
   <p class="address-info__address popup__address-text">Бишкек, улица Табышалиева, 57</p>
 </label>
 <button class="delete-btn popup__delete-btn" type="button"></button>
 </li>
 <li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address">
   <p class="address-info__address popup__address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
 </label>
 <button class="delete-btn popup__delete-btn" type="button"></button>
 </li>
 <li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address">
   <p class="address-info__address popup__address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
 </label>
@@ -86,7 +86,7 @@ export const courierAddressHTML = `<li class="popup__address">
 </li>`;
 
 export const pickupAddressHTML = `<li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address" checked>
   <div class="address-info">
     <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
@@ -103,7 +103,7 @@ export const pickupAddressHTML = `<li class="popup__address">
 <button class="delete-btn popup__delete-btn" type="button"></button>
 </li>
 <li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address">
   <div class="address-info">
     <p class="address-info__address popup__address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
@@ -121,7 +121,7 @@ export const pickupAddressHTML = `<li class="popup__address">
 <button class="delete-btn popup__delete-btn" type="button"></button>
 </li>
 <li class="popup__address">
-<label class="popup__address-label">
+<label class="popup__label">
   <input class="popup__radio" type="radio" name="address">
   <div class="address-info">
     <p class="address-info__address popup__address-text">г. Бишкек, улица Табышалиева, д. 57</p>
