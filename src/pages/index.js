@@ -531,9 +531,6 @@ async function init() {
     });
   }
 
-  const confirmOrderButton = document.querySelector(
-    ".total__confirm-order-btn"
-  );
   confirmOrderButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     if (window.innerWidth <= 767) {
