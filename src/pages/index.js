@@ -12,6 +12,7 @@ const accordionButtons = document.querySelectorAll(
 const refusalHoverableElements = document.querySelectorAll(
   ".refusal__text-hoverable"
 );
+const recipientInputs = document.querySelectorAll(".recipient__input");
 const labelCheckAll = document.querySelector(".checkbox-label_type_check-all");
 const secondDeliveryField = document.querySelectorAll(
   ".delivery__field_include-items"
@@ -454,9 +455,6 @@ async function init() {
     });
   });
 
-  const recipientInputs = document.querySelectorAll(".recipient__input");
-  const recipientLabels = document.querySelectorAll(".recipient__label");
-
   recipientInputs.forEach((input) => {
     input.addEventListener("focus", function () {
       const correspondingLabel = document.querySelector(
@@ -477,10 +475,6 @@ async function init() {
 
   function validateFields() {
     recipientInputs.forEach((input) => {
-      const correspondingLabel = document.querySelector(
-        `[for="${input.getAttribute("id")}"]`
-      );
-
       let errorSpan;
 
       if (input.nextElementSibling.classList.contains("recipient__error")) {
