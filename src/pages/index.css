@@ -144,6 +144,8 @@
 @import url(../blocks/card-logo/_type/card-logo_type_mastercard.css);
 @import url(../blocks/card-logo/_type/card-logo_type_maestro.css);
 
+@import url(../blocks/error/error.css);
+
 @import url(../blocks/recipient/recipient.css);
 @import url(../blocks/recipient/__header/recipient__header.css);
 @import url(../blocks/recipient/__fieldset/recipient__fieldset.css);
