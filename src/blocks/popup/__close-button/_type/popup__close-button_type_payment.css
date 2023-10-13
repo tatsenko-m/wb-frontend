@@ -1,0 +1,5 @@
+@media screen and (max-width: 532px) {
+  .popup__close-button_type_payment {
+    margin-bottom: 2px;
+  }
+}

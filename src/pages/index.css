@@ -198,6 +198,7 @@
 @import url(../blocks/popup/__header/_type/popup__header_type_payment.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__close-button/_type/popup__close-button_type_payment.css);
 @import url(../blocks/popup/__content/popup__content.css);
 @import url(../blocks/popup/__content/_type/popup__content_type_payment.css);
 @import url(../blocks/popup/__menu/popup__menu.css);

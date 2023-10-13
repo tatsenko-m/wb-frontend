@@ -1,3 +1,9 @@
 .popup__content_type_payment {
   padding: 0 22px 120px;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__content_type_payment {
+    padding: 2px 16px 310px;
+  }
+}
