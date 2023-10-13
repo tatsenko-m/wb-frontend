@@ -1,3 +1,9 @@
 .popup__container_type_delivery {
   min-width: 500px;
 }
+
+@media screen and (max-width: 532px) {
+  .popup__container_type_delivery {
+    min-width: fit-content;
+  }
+}
