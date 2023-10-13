@@ -516,7 +516,8 @@ async function init() {
       }
 
       if (input.getAttribute("name") === "email" && input.value.trim() !== "") {
-        if (!/\S+@\S+\.\S+/.test(input.value)) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        if (!emailRegex.test(input.value)) {
           errorSpan.textContent = "Проверьте адрес электронной почты";
         }
       }
