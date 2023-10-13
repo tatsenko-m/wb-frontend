@@ -279,6 +279,32 @@ function submitPopup(popup, closePopupFunc, evt) {
   closePopupFunc(popup);
 }
 
+function deletePopupAddress() {
+  this.parentElement.style.display = "none";
+}
+
+function courierButtonClickHandler() {
+  courierButton.classList.add("popup__menu-button_active");
+  pickupButton.classList.remove("popup__menu-button_active");
+  addressList.innerHTML = courierAddressHTML;
+  const addressDeleteButtons =
+    deliveryPopup.querySelectorAll(".popup__delete-btn");
+  addressDeleteButtons.forEach((btn) => {
+    btn.addEventListener("click", deletePopupAddress.bind(btn));
+  });
+}
+
+function pickupButtonClickHandler() {
+  pickupButton.classList.add("popup__menu-button_active");
+  courierButton.classList.remove("popup__menu-button_active");
+  addressList.innerHTML = pickupAddressHTML;
+  const addressDeleteButtons =
+    deliveryPopup.querySelectorAll(".popup__delete-btn");
+  addressDeleteButtons.forEach((btn) => {
+    btn.addEventListener("click", deletePopupAddress.bind(btn));
+  });
+}
+
 function openPopup(popup, closePopupFunc) {
   const popupCloseButton = popup.querySelector(".popup__close-button");
   const popupSubmitButton = popup.querySelector(".popup__choose-button");
@@ -294,6 +320,16 @@ function openPopup(popup, closePopupFunc) {
     "keydown",
     handleEscClose.bind(null, popup, closePopupFunc)
   );
+
+  if (popup.id === "popup-delivery") {
+    const addressDeleteButtons = popup.querySelectorAll(".popup__delete-btn");
+    addressDeleteButtons.forEach((btn) => {
+      btn.addEventListener("click", deletePopupAddress.bind(btn));
+    });
+
+    courierButton.addEventListener("click", courierButtonClickHandler);
+    pickupButton.addEventListener("click", pickupButtonClickHandler);
+  }
 }
 
 function closePopup(popup) {
@@ -305,6 +341,16 @@ function closePopup(popup) {
   popupCloseButton.removeEventListener("click", closePopup);
   popupSubmitButton.removeEventListener("click", submitPopup);
   document.removeEventListener("keydown", handleEscClose);
+
+  if (popup.id === "popup-delivery") {
+    const addressDeleteButtons = popup.querySelectorAll(".popup__delete-btn");
+    addressDeleteButtons.forEach((btn) => {
+      btn.removeEventListener("click", deletePopupAddress);
+    });
+
+    courierButton.removeEventListener("click", courierButtonClickHandler);
+    pickupButton.removeEventListener("click", pickupButtonClickHandler);
+  }
 }
 
 async function init() {
@@ -369,18 +415,6 @@ async function init() {
     el.addEventListener("mouseout", () => {
       el.parentElement.nextElementSibling.style.display = "none";
     });
-  });
-
-  courierButton.addEventListener("click", () => {
-    courierButton.classList.add("popup__menu-button_active");
-    pickupButton.classList.remove("popup__menu-button_active");
-    addressList.innerHTML = courierAddressHTML;
-  });
-
-  pickupButton.addEventListener("click", () => {
-    pickupButton.classList.add("popup__menu-button_active");
-    courierButton.classList.remove("popup__menu-button_active");
-    addressList.innerHTML = pickupAddressHTML;
   });
 
   openDeliveryPopupButtons.forEach((btn) => {
