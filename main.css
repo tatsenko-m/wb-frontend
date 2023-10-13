@@ -685,7 +685,7 @@
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/popup/__container/_type/popup__container_type_delivery.css ***!
   \***********************************************************************************************************************************************************************************************/
-.popup__container_type_delivery{min-width:500px}
+.popup__container_type_delivery{min-width:500px}@media screen and (max-width:532px){.popup__container_type_delivery{min-width:-moz-fit-content;min-width:fit-content}}
 /*!*********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./src/blocks/popup/__header/popup__header.css ***!
   \*********************************************************************************************************************************************************************/
